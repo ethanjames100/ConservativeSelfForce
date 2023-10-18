@@ -1,0 +1,101 @@
+\documentclass[preprint,showpacs,preprintnumbers,amssymb,superscriptaddress,aps,prd,nofootinbib,11pt]{revtex4-1}
+
+\oddsidemargin=-0.2cm
+\evensidemargin=-0.2cm
+\topmargin=-0.5cm
+\textheight=21.5cm 
+\textwidth=16.7cm 
+
+\linespread{1.2}
+\selectfont 
+
+\usepackage{graphicx}       % Include figure files
+\usepackage{dcolumn}        % Align table columns on decimal point
+\usepackage{bm}             % bold math
+\usepackage{psfrag}
+\usepackage{tensor}
+\usepackage[usenames]{color}
+\definecolor{navyblue}{rgb}{0.0, 0.0, 0.5}
+\usepackage[linktocpage,colorlinks=true,allcolors=navyblue]{hyperref}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{xcolor}
+\usepackage{physics}
+
+%\setlength{\textwidth}{16cm} \setlength{\hoffset}{-1.3cm}
+%\setlength{\textheight}{23.5cm} \setlength{\voffset}{-2cm}
+
+\newcommand{\bmath}[1]{\mbox{\boldmath{$#1$}}}
+\newcommand{\vsp}{\vspace{0.2cm}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cS}{\mathcal{T}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\mass}{\mathfrak{m}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\rhoc}{\overline{\rho}}
+\newcommand{\mbar}{\overline{m}}
+\newcommand{\Pin}{P^{\ell m, h}} 
+\newcommand{\Pup}{P^{\ell m, \infty}}
+\newcommand{\bl}[1]{\textcolor{blue}{#1}}
+\newcommand{\asm}{\mathrm{a}}   % We are using 'a' for the spin parameter and the semi-major axis. I have replaced the latter with \asm.
+\newcommand{\rmin}{r_{\text{min}}}
+\newcommand{\rmax}{r_{\text{max}}}
+
+
+\newcommand{\sam}[1]{\textcolor{blue}{[\textbf{SD}: #1]}}
+\newcommand{\ethan}[1]{\textcolor{red}{[\textbf{EJG}: #1]}}
+
+\def\p{\partial}
+\def\D{\displaystyle}
+\def\I{\textit}
+
+\begin{document}
+
+\preprint{}
+
+ \title{Conservative Electromagnetic Self Force}
+
+
+\author{Ethan J. German}
+% \email{ejgerman1@sheffield.ac.uk}
+\affiliation{Consortium for Fundamental Physics, School of Mathematics and Statistics,
+University of Sheffield, Hicks Building, Hounsfield Road, Sheffield S3 7RH, United Kingdom}
+\date{\today}
+\maketitle
+
+\section{The Conservative Self-Force}
+The conservative self-force is the radial component of the self force, defined \cite{TorresDolan2022}:
+\begin{equation}
+    \mathcal{F}_r = q F_{r\mu} u^\mu
+\end{equation}
+Where $u^\mu$ is a tangent vector to the particle's worldline and $F_{\mu\nu}$ is the Maxwell tensor, reconstructed from the Maxwell scalars by:
+\begin{equation}
+    F_{\mu \nu}=2\left[\phi_2 l_{[\mu} m_{\nu]}+\phi_0 \bar{m}_{[\mu} n_{\nu]}+\phi_1\left(n_{[\mu} l_{\nu]}+m_{[\mu} \bar{m}_{\nu]}\right)\right]+\text { c.c. }
+\end{equation}
+
+where $\{l^\mu,n^\mu, m^\mu, \bar{m}^\mu\}$ form the Newmann-Pensrose (NP) null-tetrad, and c.c. refers to all complex conjugates of preceding terms. In the case of electromagnetic self force $\phi_0$ and $\phi_2$ have been determined for particles on eccentric orbits in the Kerr spacetime \cite{german2023adiabatic}. It remains to determine $\phi_1$.
+
+To determine $\phi_1$ we can use one of the four Maxwell equations \cite{Teukolsky:1973ha}:
+\begin{equation}
+\begin{aligned}
+(D-2 \rho) \phi_1-\left(\delta^*+\pi-2 \alpha\right) \phi_0 & =2 \pi J_l, \\
+(\delta-2 \tau) \phi_1-(\Delta+\mu-2 \gamma) \phi_0 & =2 \pi J_m, 
+\end{aligned}
+\end{equation}
+We need only solve one of these to determine $\phi_1$, the other can be used as a consistency check. 
+We take the same source term as \cite{german2023adiabatic}: 
+\begin{equation}
+J^\mu=q \int u^\mu \delta^4\left(x-x_0(\tau)\right) d \tau
+\end{equation} 
+\bibliographystyle{apsrev4-1}
+\bibliography{conservativeSelfForce}
+\end{document}
