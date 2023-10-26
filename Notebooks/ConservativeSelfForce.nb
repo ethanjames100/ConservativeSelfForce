@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8055,        221]
-NotebookOptionsPosition[      7003,        194]
-NotebookOutlinePosition[      7436,        211]
-CellTagsIndexPosition[      7393,        208]
+NotebookDataLength[     17001,        432]
+NotebookOptionsPosition[     16001,        404]
+NotebookOutlinePosition[     16436,        421]
+CellTagsIndexPosition[     16393,        418]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,27 +25,220 @@ Cell["Preamble", "Chapter",
   3.906701821622283*^9}},ExpressionUUID->"56011934-84d5-40b4-bcd4-\
 767306470ed6"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
- RowBox[{
-  RowBox[{
-  "mypath", "=", 
-   "\"\<C:\\\\Users\\\\SMP22EJG\\\\Documents\\\\GitHub\\\\\>\""}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"myfiles", "=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"mypath", "<>", "\"\<Teukolsky\>\""}], ",", 
-     RowBox[{"mypath", "<>", "\"\<KerrGeodesics\>\""}], ",", " ", 
-     "\"\<SpinWeightedSpheroidalHarmonics\>\""}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
  RowBox[{"<<", " ", "KerrGeodesics`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", " ", "GeneralRelativityTensors`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "SpinWeightedSpheroidalHarmonics`"}], "\[IndentingNewLine]", 
- RowBox[{"<<", "Teukolsky`"}]}], "Input",
+ RowBox[{"<<", "Teukolsky`"}], "\[IndentingNewLine]", 
+ RowBox[{"Information", "[", 
+  RowBox[{"PacletObject", "[", "\"\<Teukolsky\>\"", "]"}], "]"}]}], "Input",
  CellChangeTimes->{{3.90670168052532*^9, 3.9067016984962344`*^9}, {
-  3.906701760745358*^9, 3.9067017993918934`*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"4022332e-084b-4bec-9cec-472b7a30486a"]
+  3.906701760745358*^9, 3.9067017993918934`*^9}, {3.9073110502107267`*^9, 
+  3.9073110513079896`*^9}, {3.907311299417811*^9, 3.9073113025755987`*^9}, {
+  3.9073113326390743`*^9, 3.907311335944372*^9}, {3.907311374550503*^9, 
+  3.9073113931759243`*^9}, {3.9073115214058847`*^9, 3.9073115296371155`*^9}, {
+  3.907311692087037*^9, 3.9073116933159485`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"4022332e-084b-4bec-9cec-472b7a30486a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    TagBox[GridBox[{
+       {
+        ItemBox[
+         PaneBox[
+          StyleBox["\<\" Paclet\"\>", "InformationTitleText",
+           StripOnInput->False],
+          FrameMargins->{{4, 0}, {-1, 1}}],
+         BaseStyle->"InformationTitleBackground",
+         StripOnInput->False]},
+       {
+        PaneBox[GridBox[{
+           {
+            
+            DynamicModuleBox[{System`InformationDump`open$$ = {
+             False, False, False, False, False, False, False, False, False, 
+              False, False, False, False, False}}, 
+             StyleBox[GridBox[{
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Name\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Name", "Tooltip"]& ], "\<\"Teukolsky\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Version\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Version\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Version", "Tooltip"]& ], "\<\"1.0.4\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Wolfram Version\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"WolframVersion\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "WolframVersion", 
+                   "Tooltip"]& ], "\<\"10.2+\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Qualifier\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Qualifier\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Qualifier", "Tooltip"]& ], "\<\"\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" System ID\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"SystemID\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "SystemID", "Tooltip"]& ], "All"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Description\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Description\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "Description", 
+                   "Tooltip"]& ], "\<\"A set of functions for computing \
+solutions to the Teukolsky equation.\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Creator\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Creator\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "Creator", 
+                   "Tooltip"]& ], "\<\"Black Hole Perturbation Toolkit\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" URL\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"URL\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "URL", 
+                   "Tooltip"]& ], "\<\"https://bhptoolkit.org/Teukolsky\"\>"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Context\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Context\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Context", "Tooltip"]& ], 
+                 RowBox[{"{", "\<\"Teukolsky`\"\>", "}"}]},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Loading\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Loading\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Loading", "Tooltip"]& ], "Manual"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Auto Updating\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"AutoUpdating\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "AutoUpdating", "Tooltip"]& ], "False"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Enabled\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Enabled\"",
+                   TooltipStyle->"TextStyling"],
+                  Annotation[#, "Enabled", "Tooltip"]& ], "True"},
+                {
+                 TagBox[
+                  TooltipBox[
+                   StyleBox["\<\" Location\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                   "\"Location\"",
+                   TooltipStyle->"TextStyling"],
+                  
+                  Annotation[#, "Location", 
+                   "Tooltip"]& ], \
+"\<\"C:\\\\Users\\\\SMP22EJG\\\\AppData\\\\Roaming\\\\Mathematica\\\\Paclets\\\
+\\Repository\\\\Teukolsky-1.0.4\"\>"}
+               },
+               AutoDelete->False,
+               GridBoxAlignment->{"Columns" -> {Right, Left}},
+               GridBoxDividers->None,
+               GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+               GridBoxSpacings->{"Columns" -> {
+                   Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                   Offset[0.27999999999999997`]}, "Rows" -> {
+                   Offset[0.2], {
+                    Offset[0.8]}, 
+                   Offset[0.2]}}], "DialogStyle",
+              StripOnInput->False],
+             DynamicModuleValues:>{}]}
+          },
+          DefaultBaseStyle->"Column",
+          GridBoxAlignment->{"Columns" -> {{Left}}},
+          GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.5599999999999999]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[3.6]}, 
+              Offset[0.2]}}],
+         FrameMargins->6]}
+      },
+      DefaultBaseStyle->"Column",
+      FrameStyle->Directive[
+        GrayLevel[0.8], 
+        Thickness[Tiny]],
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxDividers->{
+       "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     "Column"],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Paclet", "Name" -> "Teukolsky", "Version" -> "1.0.4", 
+    "WolframVersion" -> "10.2+", "Qualifier" -> "", "SystemID" -> All, 
+    "Description" -> 
+    "A set of functions for computing solutions to the Teukolsky equation.", 
+    "Creator" -> "Black Hole Perturbation Toolkit", "URL" -> 
+    "https://bhptoolkit.org/Teukolsky", "Context" -> {"Teukolsky`"}, 
+    "Loading" -> Manual, "AutoUpdating" -> False, "Enabled" -> True, 
+    "Location" -> 
+    "C:\\Users\\SMP22EJG\\AppData\\Roaming\\Mathematica\\Paclets\\Repository\\\
+Teukolsky-1.0.4"|>, True]]], "Output",
+ CellChangeTimes->{
+  3.9073113953866167`*^9, {3.9073115043062143`*^9, 3.9073115303405905`*^9}, {
+   3.9073116939947443`*^9, 3.9073117021502423`*^9}},
+ CellLabel->"Out[5]=",ExpressionUUID->"21d132bc-15fb-46c2-acf4-3b47fe919661"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -65,16 +258,16 @@ d7a4611fec70"],
 Cell[CellGroupData[{
 
 Cell[TextData[{
- "Calculating ",
+ "Calculating homogenous ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[CapitalPhi]", "1"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["\[CapitalPhi]", "1"], TraditionalForm]],ExpressionUUID->
   "dba6cb4c-b9cf-4ced-a3e9-23c32d910446"],
  " given a radius r"
 }], "Section",
- CellChangeTimes->{{3.906701851127466*^9, 
-  3.906701865525471*^9}},ExpressionUUID->"ca2eaacd-7b98-45ba-9611-\
+ CellChangeTimes->{{3.906701851127466*^9, 3.906701865525471*^9}, {
+  3.9073145187639437`*^9, 
+  3.9073145260664816`*^9}},ExpressionUUID->"ca2eaacd-7b98-45ba-9611-\
 fcc9c1a6de56"],
 
 Cell[BoxData[
@@ -89,7 +282,8 @@ Cell[BoxData[
      "\[CapitalOmega]", ",", "\[Omega]", ",", " ", "\[CapitalSigma]", ",", 
       " ", "\[CapitalDelta]", ",", " ", "Trad", ",", " ", "Tradmino", ",", 
       " ", "orbit", ",", " ", "t0", ",", "r0", ",", "\[Theta]0", ",", " ", 
-      "\[Phi]0", ",", " ", "Q0", ",", "K0", ",", 
+      "\[Phi]0", ",", " ", "Q0", ",", "K0", ",", "\[CapitalBeta]", ",", " ", 
+      "\[Lambda]", ",", " ", 
       RowBox[{"prec", "=", "32"}]}], "}"}], ",", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"\[CapitalSigma]", "=", 
@@ -109,7 +303,7 @@ Cell[BoxData[
       RowBox[{"KerrGeoFrequencies", "[", 
        RowBox[{"a", ",", "p", ",", "e", ",", "1"}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
-     RowBox[{"\[Omega]", ":=", 
+     RowBox[{"\[Omega]", "=", 
       RowBox[{
        RowBox[{"m", " ", 
         RowBox[{"\[CapitalOmega]", "[", 
@@ -117,10 +311,6 @@ Cell[BoxData[
        RowBox[{"n", " ", 
         RowBox[{"\[CapitalOmega]", "[", 
          RowBox[{"[", "1", "]"}], "]"}]}]}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalOmega]", "=", " ", 
-      RowBox[{"KerrGeoFrequencies", "[", 
-       RowBox[{"a", ",", "p", ",", "e", ",", "1"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
      RowBox[{"Trad", " ", "=", 
       RowBox[{"2", 
        RowBox[{"\[Pi]", "/", 
@@ -169,32 +359,52 @@ Cell[BoxData[
            RowBox[{"r0", "[", "\[Lambda]", "]"}], "2"], " ", "+", " ", 
           SuperscriptBox["a", "2"]}], ")"}]}], "-", " ", 
        RowBox[{"a", " ", "m"}]}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalBeta]", "=", " ", "Sqrt"}]}]}], "\[IndentingNewLine]", 
+     RowBox[{"\[Lambda]", " ", "=", " ", 
+      RowBox[{"SpinWeightedSpheroidalEigenvalue", "[", 
+       RowBox[{"1", ",", "l", ",", "m", ",", 
+        RowBox[{"a", " ", "\[Omega]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"\[CapitalBeta]", "=", " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        SuperscriptBox["\[Lambda]", 
+         RowBox[{"2", " "}]], "+", " ", 
+        RowBox[{"4", " ", "a", " ", "m", " ", "\[Omega]"}], " ", "-", " ", 
+        RowBox[{"4", " ", 
+         SuperscriptBox[
+          RowBox[{"a", " "}], "2"], " ", 
+         SuperscriptBox["\[Omega]", "2"]}]}], "]"}]}], ";"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"To", " ", 
+     RowBox[{"Do", ":", " ", 
+      RowBox[{"calculate", " ", 
+       SubscriptBox["g", 
+        RowBox[{"+", "1"}]], " ", "and", " ", 
+       SubscriptBox["f", 
+        RowBox[{"-", "1"}]], " ", "and", " ", "then", " ", "combine", " ", 
+       "them", " ", "to", " ", "calculate", " ", 
+       SubscriptBox[
+        StyleBox["\[Phi]",
+         FontWeight->"Bold"], "1"]}]}]}], "*)"}], "\[IndentingNewLine]", 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.9067019140656986`*^9, 3.906701953983088*^9}, {
   3.9067019965339766`*^9, 3.9067019969519205`*^9}, {3.906702042814136*^9, 
   3.906702063115626*^9}, {3.906702102062616*^9, 3.906702151151533*^9}, {
   3.9067023333094645`*^9, 3.9067024266065903`*^9}, {3.9067024650149584`*^9, 
   3.906702494789173*^9}, {3.9067025301907597`*^9, 3.906702618149555*^9}, {
-  3.9067028480744996`*^9, 
-  3.906702873457426*^9}},ExpressionUUID->"90280de5-bc8c-4835-8db2-\
-9a9a409808e6"],
-
-Cell[BoxData["Teukolsky"], "Input",
- CellChangeTimes->{{3.9067028928052545`*^9, 
-  3.906702895975316*^9}},ExpressionUUID->"db3df9a1-634b-4da8-a2f4-\
-828dfc5d5276"],
-
-Cell[BoxData[
- RowBox[{"ClearAll", "[", "K", "]"}]], "Input",
- CellChangeTimes->{{3.9067020239961686`*^9, 3.906702036534802*^9}},
- CellLabel->"In[11]:=",ExpressionUUID->"7e271a0b-5840-4f05-a3a6-a440c1a71d49"]
-}, Open  ]]
+  3.9067028480744996`*^9, 3.906702873457426*^9}, {3.907221199637492*^9, 
+  3.90722120684103*^9}, {3.9073122496659064`*^9, 3.9073123084727793`*^9}, {
+  3.907312816605691*^9, 3.9073128381500397`*^9}, {3.907312871847325*^9, 
+  3.907312879773122*^9}, {3.907312926215913*^9, 3.9073129311834145`*^9}, {
+  3.9073144577735844`*^9, 
+  3.9073145063251047`*^9}},ExpressionUUID->"90280de5-bc8c-4835-8db2-\
+9a9a409808e6"]
+}, Closed]]
 }, Open  ]]
 },
-WindowSize->{1428., 741.75},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-Magnification:>1.7 Inherited,
+WindowSize->{1440., 747.75},
+WindowMargins->{{-6, Automatic}, {-6, Automatic}},
+Magnification:>1.2 Inherited,
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"745bdb38-43c2-4946-9a3d-d0d6bf6f56f6"
@@ -211,17 +421,18 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 153, 3, 115, "Chapter",ExpressionUUID->"56011934-84d5-40b4-bcd4-767306470ed6"],
-Cell[736, 27, 893, 20, 210, "Input",ExpressionUUID->"4022332e-084b-4bec-9cec-472b7a30486a"]
+Cell[580, 22, 153, 3, 83, "Chapter",ExpressionUUID->"56011934-84d5-40b4-bcd4-767306470ed6"],
+Cell[CellGroupData[{
+Cell[758, 29, 892, 13, 126, "Input",ExpressionUUID->"4022332e-084b-4bec-9cec-472b7a30486a"],
+Cell[1653, 44, 8108, 195, 311, "Output",ExpressionUUID->"21d132bc-15fb-46c2-acf4-3b47fe919661"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1666, 52, 341, 10, 115, "Chapter",ExpressionUUID->"ab927d55-147e-4f84-97ba-d7a4611fec70"],
+Cell[9810, 245, 341, 10, 83, "Chapter",ExpressionUUID->"ab927d55-147e-4f84-97ba-d7a4611fec70"],
 Cell[CellGroupData[{
-Cell[2032, 66, 368, 11, 112, "Section",ExpressionUUID->"ca2eaacd-7b98-45ba-9611-fcc9c1a6de56"],
-Cell[2403, 79, 4195, 101, 549, "Input",ExpressionUUID->"90280de5-bc8c-4835-8db2-9a9a409808e6"],
-Cell[6601, 182, 163, 3, 47, "Input",ExpressionUUID->"db3df9a1-634b-4da8-a2f4-828dfc5d5276"],
-Cell[6767, 187, 208, 3, 47, "Input",ExpressionUUID->"7e271a0b-5840-4f05-a3a6-a440c1a71d49"]
-}, Open  ]]
+Cell[10176, 259, 401, 11, 81, "Section",ExpressionUUID->"ca2eaacd-7b98-45ba-9611-fcc9c1a6de56"],
+Cell[10580, 272, 5393, 128, 370, "Input",ExpressionUUID->"90280de5-bc8c-4835-8db2-9a9a409808e6"]
+}, Closed]]
 }, Open  ]]
 }
 ]
