@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    113779,       2616]
-NotebookOptionsPosition[    105515,       2506]
-NotebookOutlinePosition[    105948,       2523]
-CellTagsIndexPosition[    105905,       2520]
+NotebookDataLength[     83279,       1947]
+NotebookOptionsPosition[     80517,       1891]
+NotebookOutlinePosition[     80950,       1908]
+CellTagsIndexPosition[     80907,       1905]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,10 +28,21 @@ Cell["Preamble", "Chapter",
 Cell[CellGroupData[{
 
 Cell[BoxData[{
+ RowBox[{
+  RowBox[{"LaunchKernels", "[", "8", "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"<<", " ", "KerrGeodesics`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", " ", "GeneralRelativityTensors`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "SpinWeightedSpheroidalHarmonics`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "Teukolsky`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "ParallelNeeds", "[", "\"\<SpinWeightedSpheroidalHarmonics`\>\"", "]"}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"ParallelNeeds", "[", "\"\<Teukolsky`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"ParallelNeeds", "[", "\"\<KerrGeodesics`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{"Information", "[", 
   RowBox[{"PacletObject", "[", "\"\<Teukolsky\>\"", "]"}], "]"}]}], "Input",
  CellChangeTimes->{{3.90670168052532*^9, 3.9067016984962344`*^9}, {
@@ -40,7 +51,8 @@ Cell[BoxData[{
    3.9073113326390743`*^9, 3.907311335944372*^9}, {3.907311374550503*^9, 
    3.9073113931759243`*^9}, {3.9073115214058847`*^9, 
    3.9073115296371155`*^9}, {3.907311692087037*^9, 3.9073116933159485`*^9}, 
-   3.907324446684822*^9, 3.907406551269519*^9},
+   3.907324446684822*^9, 3.907406551269519*^9, {3.9076487651276703`*^9, 
+   3.9076487719980497`*^9}, {3.9076539659318485`*^9, 3.907653966092723*^9}},
  CellLabel->"In[1]:=",ExpressionUUID->"4022332e-084b-4bec-9cec-472b7a30486a"],
 
 Cell[BoxData[
@@ -238,8 +250,9 @@ Teukolsky-1.0.4"|>, True]]], "Output",
  CellChangeTimes->{
   3.9073113953866167`*^9, {3.9073115043062143`*^9, 3.9073115303405905`*^9}, {
    3.9073116939947443`*^9, 3.9073117021502423`*^9}, 3.9074069047559395`*^9, {
-   3.9074098620187254`*^9, 3.907409870190577*^9}, 3.907645573468013*^9},
- CellLabel->"Out[5]=",ExpressionUUID->"5b9f0054-bc8d-4f35-8e69-34d1d698f846"]
+   3.9074098620187254`*^9, 3.907409870190577*^9}, 3.907645573468013*^9, {
+   3.9076539695330095`*^9, 3.9076539772770953`*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"f6e97452-173a-4a20-8fd7-0d6e850429d5"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1094,14 +1107,14 @@ Cell[BoxData[
       RowBox[{"[", "1", "]"}], "]"}]}]}], "\[IndentingNewLine]", 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.907647499464642*^9, 3.9076475340607224`*^9}},
- CellLabel->"In[87]:=",ExpressionUUID->"8e60aa0b-2a2b-44a0-8140-6308d3f3d638"],
+ CellLabel->"In[10]:=",ExpressionUUID->"8e60aa0b-2a2b-44a0-8140-6308d3f3d638"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"LMAX", " ", "=", " ", "2"}], ";", 
   RowBox[{"NMAX", "=", "2"}], ";"}]], "Input",
  CellChangeTimes->{{3.9074077591853952`*^9, 3.9074077915191684`*^9}},
- CellLabel->"In[29]:=",ExpressionUUID->"79af36db-faf0-4b96-90d5-d99a6c2282ba"],
+ CellLabel->"In[11]:=",ExpressionUUID->"79af36db-faf0-4b96-90d5-d99a6c2282ba"],
 
 Cell[BoxData[
  RowBox[{
@@ -1299,43 +1312,65 @@ Cell[BoxData[
       RowBox[{"Total", "[", 
        RowBox[{"Flatten", "[", "sum", "]"}], "]"}]}]}]}], 
    "\[IndentingNewLine]", "]"}]}]], "Input",
- CellChangeTimes->CompressedData["
-1:eJwdzF9IU3EAxfExnWyxklAs+rNcshu6i64SJqiZsIl70JqOZKmbmwkzKZPd
-atGy6EKsQmQZTCFRxAcnzpbIwLBEkVpugspYqGQYGz2smYXQNmO183s4fOA8
-fMXGzro2LofDoVODfW/d+k8nopWnd38aoNy+Y4ZXRCEGhmY8D6BIcbUblh2W
-sPDbahXR/aXCBhlx5ksYM5aOwTO6yDTk6AVbcL2NCsPxRFUEakxlSWgd4QmW
-UmZvrgmhUUUdJS5N58LZ0IYEbhkSFKzVr8ig6MfAWchPFsihqmtQAf0udSNs
-qo6aIOM42Attkh6ixU474C1X/iRU7i974Kmi+Dsot7V7YWgkTrx2n7sLFfx/
-e7A43LwPvVpLkvTzNtN8KR/RMR6czzMcgMK7GiG0l1KFsGSgRQZfTBTmXDgZ
-rTzvcx6DvOVAAxzuYLWwPuuiDooCwVY4Jd1uh/5F9XX44elDM0zPHO2GTMY4
-C0tU80SdV/sc3pEFe6GbDfZB26z5FUx8dw/D5OSCE358rFmBfO8GkWZqPsOO
-fuU6tPJvb8O5ztfEm7WWMLzhnyH6L/kisODeuSjklg/9Ir/a+hs6n9X/gcoj
-8b+wRTolqEhZ/ObrIbjgSM+CFOs6DmNd1blwb+cyMWASS2F59hMineCx0ON8
-T/wPaDdQAQ==
-  "],ExpressionUUID->"46d35036-b753-4161-9ea2-9eeea1b6d281"],
+ CellChangeTimes->{{3.907406589522775*^9, 3.907406607498063*^9}, {
+   3.9074067514552264`*^9, 3.907406759128703*^9}, {3.9074068297101917`*^9, 
+   3.907406834820815*^9}, {3.907406873158354*^9, 3.9074068742131205`*^9}, {
+   3.9074069139958115`*^9, 3.9074070084728336`*^9}, {3.907407169855831*^9, 
+   3.907407271355243*^9}, {3.9074076002928467`*^9, 3.9074076571999326`*^9}, {
+   3.9074077062180986`*^9, 3.9074078578877354`*^9}, {3.9074079441760845`*^9, 
+   3.907407974589243*^9}, {3.907408065196458*^9, 3.907408133649705*^9}, {
+   3.9074081748404217`*^9, 3.9074081838244467`*^9}, {3.907408262511634*^9, 
+   3.907408268810073*^9}, {3.9074083133435097`*^9, 3.9074084209200788`*^9}, {
+   3.9074086025524654`*^9, 3.907408711415083*^9}, {3.907409016424738*^9, 
+   3.9074090204108315`*^9}, {3.9074090813927574`*^9, 
+   3.9074092653024216`*^9}, {3.9074093344369226`*^9, 3.907409391787002*^9}, {
+   3.907409475297878*^9, 3.907409479801134*^9}, {3.9074097920775623`*^9, 
+   3.907409831969759*^9}, {3.907409882934229*^9, 3.9074099077609596`*^9}, {
+   3.907409950848078*^9, 3.907409967755432*^9}, {3.9074100030356145`*^9, 
+   3.907410018639532*^9}, {3.9074102891947713`*^9, 3.9074103070187035`*^9}, {
+   3.9076456174585657`*^9, 3.9076456533060546`*^9}, {3.907646142650027*^9, 
+   3.907646156106888*^9}, {3.907646194002359*^9, 3.907646238713393*^9}, {
+   3.907646287036584*^9, 3.907646290555273*^9}, {3.907646363985568*^9, 
+   3.907646453126833*^9}, {3.9076464933132877`*^9, 3.907646494040188*^9}, {
+   3.907646554805709*^9, 3.9076465906934156`*^9}, {3.907646622703575*^9, 
+   3.907646691616764*^9}, {3.9076467255283175`*^9, 3.9076467980838614`*^9}, {
+   3.907647106640964*^9, 3.907647110836918*^9}, {3.907647162420431*^9, 
+   3.9076471781748557`*^9}, {3.9076472436572857`*^9, 3.907647245482391*^9}, {
+   3.907647275759574*^9, 3.9076472778062043`*^9}, {3.907647326353491*^9, 
+   3.9076473375772905`*^9}, {3.9076473729761972`*^9, 3.907647379884985*^9}, {
+   3.9076474186106763`*^9, 3.9076474637840905`*^9}, {3.907647565567795*^9, 
+   3.9076476069903812`*^9}, {3.907647640143525*^9, 3.9076477094222593`*^9}, {
+   3.907647746263912*^9, 3.907647746529169*^9}, {3.9076478330440464`*^9, 
+   3.9076478361899705`*^9}, {3.9076485361867886`*^9, 
+   3.9076485419582167`*^9}, {3.9076487528811407`*^9, 3.907648753802874*^9}, 
+   3.9076541582513905`*^9},
+ CellLabel->"In[14]:=",ExpressionUUID->"46d35036-b753-4161-9ea2-9eeea1b6d281"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"AbsoluteTiming", "[", 
   RowBox[{"\[CapitalPhi]0", " ", "[", 
-   RowBox[{"0", " ", ",", " ", "8", ",", "0.5", ",", "10", ",", "0.1"}], 
+   RowBox[{"0", " ", ",", " ", 
+    RowBox[{"lowerRs", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], ",", "0.5", ",", "10", ",", "0.1"}], 
    "]"}], "]"}]], "Input",
  CellChangeTimes->{{3.9076482395552597`*^9, 3.9076482553633566`*^9}, 
-   3.9076484148685694`*^9},
+   3.9076484148685694`*^9, {3.907648695168555*^9, 3.90764869880857*^9}},
  CellLabel->
-  "In[102]:=",ExpressionUUID->"b6e90873-008e-4bd5-a905-944c10d27058"],
+  "In[112]:=",ExpressionUUID->"b6e90873-008e-4bd5-a905-944c10d27058"],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"11.9195404`", ",", 
+  RowBox[{"11.9242423`", ",", 
    RowBox[{
-    RowBox[{"-", "0.0010883834124001`"}], "+", 
-    RowBox[{"0.0014004309237699518`", " ", "\[ImaginaryI]"}]}]}], 
+    RowBox[{"-", "0.0007979368713145878`"}], "+", 
+    RowBox[{"0.0011418180157901961`", " ", "\[ImaginaryI]"}]}]}], 
   "}"}]], "Output",
- CellChangeTimes->{3.9076482679365053`*^9, 3.907648427246834*^9},
+ CellChangeTimes->{3.9076482679365053`*^9, 3.907648427246834*^9, 
+  3.907648711104853*^9},
  CellLabel->
-  "Out[102]=",ExpressionUUID->"6f9342b5-7993-40ef-a2f9-bfb76210504b"]
+  "Out[112]=",ExpressionUUID->"fc629eb2-e8ab-4199-835b-3ebc577168fc"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1344,8 +1379,7 @@ Cell[BoxData[
  RowBox[{"Module", "[", 
   RowBox[{
    RowBox[{"{", 
-    RowBox[{
-    "rmin", ",", " ", "rmax", ",", " ", "lowerRs", ",", "upperRs", ",", 
+    RowBox[{"rmin", ",", " ", "rmax", ",", 
      RowBox[{"a", "=", "0"}], ",", " ", 
      RowBox[{"p", "=", "10"}], ",", 
      RowBox[{"e", "=", "0.1"}], ",", " ", 
@@ -1366,7 +1400,9 @@ Cell[BoxData[
      RowBox[{"Subdivide", "[", 
       RowBox[{"rmax", ",", " ", "20", ",", "50"}], "]"}]}], ";", 
     "\[IndentingNewLine]", 
-    RowBox[{"Print", "[", "lowerRs", "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"lowerRs", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
     RowBox[{"lower\[CapitalPhi]0", " ", "=", " ", 
      RowBox[{"ParallelTable", "[", 
       RowBox[{
@@ -1379,7 +1415,7 @@ Cell[BoxData[
         RowBox[{"i", ",", "1", " ", ",", 
          RowBox[{"Length", "[", "lowerRs", "]"}]}], "}"}]}], "]"}]}], ";", 
     "\[IndentingNewLine]", 
-    RowBox[{"upper\[CapitalPhi]0", " ", "=", " ", 
+    RowBox[{"upper\[CapitalPhi]0", " ", "=", 
      RowBox[{"ParallelTable", "[", 
       RowBox[{
        RowBox[{"\[CapitalPhi]0", " ", "[", 
@@ -1396,1112 +1432,461 @@ Cell[BoxData[
   3.9076480412095323`*^9}, {3.90764808939017*^9, 3.907648104260687*^9}, {
   3.907648148554431*^9, 3.90764822142367*^9}, {3.9076482850524187`*^9, 
   3.9076483587783623`*^9}, {3.9076484642750735`*^9, 3.9076485087737293`*^9}, {
-  3.9076485469496546`*^9, 3.9076485625310044`*^9}},
+  3.9076485469496546`*^9, 3.9076485625310044`*^9}, {3.907648658793744*^9, 
+  3.907648685871889*^9}, {3.90764872372742*^9, 3.90764874193576*^9}, {
+  3.907654170838008*^9, 3.9076541761238403`*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"239fd6d4-fa3b-44de-8fc8-1cbe5e57307e"],
+
+Cell[BoxData["6.2`"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{
+  3.907648359956275*^9, {3.9076484689023824`*^9, 3.9076485095600357`*^9}, {
+   3.9076485497471094`*^9, 3.907648563225844*^9}, {3.907648659922104*^9, 
+   3.907648686902354*^9}, 3.9076487424110994`*^9, 3.9076539411560097`*^9, 
+   3.907654094534721*^9, 3.907654176726899*^9, 3.907656387689539*^9},
  CellLabel->
-  "In[107]:=",ExpressionUUID->"239fd6d4-fa3b-44de-8fc8-1cbe5e57307e"],
+  "During evaluation of \
+In[39]:=",ExpressionUUID->"0ffe03ee-0233-4716-b337-1f1c09846a8b"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"rmax", ",", " ", "rmin"}], "}"}], " ", "=", " ", 
+   RowBox[{"OrbitTP", "[", 
+    RowBox[{"10", ",", "0.1"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.907648396779828*^9, 3.9076483990572824`*^9}, 
+   3.907655683948867*^9, {3.90765597640658*^9, 3.907655979035503*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"ec2cebf8-0343-474c-af1d-4c804154784c"],
 
 Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"AllData", " ", "=", " ", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Re", "[", "lower\[CapitalPhi]0", "]"}], ",", 
+     RowBox[{"Im", "[", "lower\[CapitalPhi]0", "]"}], ",", " ", 
+     RowBox[{"Re", "[", "upper\[CapitalPhi]0", "]"}], ",", 
+     RowBox[{"Im", "[", "upper\[CapitalPhi]0", "]"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lineStyle", "=", 
+   RowBox[{"{", 
+    RowBox[{"Thick", ",", "Black", ",", "Dashed"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"line1", "=", 
+   RowBox[{"Line", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"rmin", ",", 
+        RowBox[{"Min", "[", "AllData", "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"rmin", ",", 
+        RowBox[{"Max", "[", "AllData", "]"}]}], "}"}]}], "}"}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"line2", "=", 
+   RowBox[{"Line", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"rmax", ",", 
+        RowBox[{"Min", "[", "AllData", "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"rmax", ",", 
+        RowBox[{"Max", "[", "AllData", "]"}]}], "}"}]}], "}"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9076485946736403`*^9, 3.9076486074132624`*^9}, {
+  3.9076562457418337`*^9, 3.907656365285904*^9}, {3.90765654879101*^9, 
+  3.907656550083316*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"86a80f31-93f8-45d1-b609-8dfd742ce8f2"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-  "6.2`", ",", "6.257818181818181`", ",", "6.315636363636363`", ",", 
-   "6.373454545454545`", ",", "6.431272727272728`", ",", "6.489090909090909`",
-    ",", "6.546909090909091`", ",", "6.604727272727272`", ",", 
-   "6.662545454545455`", ",", "6.720363636363637`", ",", "6.778181818181819`",
-    ",", "6.836`", ",", "6.893818181818183`", ",", "6.951636363636364`", ",", 
-   "7.009454545454545`", ",", "7.067272727272727`", ",", "7.125090909090909`",
-    ",", "7.1829090909090905`", ",", "7.240727272727273`", ",", 
-   "7.2985454545454544`", ",", "7.356363636363636`", ",", 
-   "7.414181818181818`", ",", "7.472`", ",", "7.529818181818182`", ",", 
-   "7.587636363636364`", ",", "7.645454545454546`", ",", 
-   "7.7032727272727275`", ",", "7.76109090909091`", ",", 
-   "7.8189090909090915`", ",", "7.876727272727273`", ",", 
-   "7.9345454545454555`", ",", "7.992363636363637`", ",", "8.05018181818182`",
-    ",", "8.108`", ",", "8.165818181818182`", ",", "8.223636363636365`", ",", 
-   "8.281454545454546`", ",", "8.339272727272729`", ",", "8.39709090909091`", 
-   ",", "8.45490909090909`", ",", "8.512727272727274`", ",", 
-   "8.570545454545456`", ",", "8.628363636363638`", ",", "8.686181818181819`",
-    ",", "8.744`", ",", "8.801818181818183`", ",", "8.859636363636366`", ",", 
-   "8.917454545454547`", ",", "8.975272727272728`", ",", "9.03309090909091`", 
-   ",", "9.090909090909092`"}], "}"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{
-  3.907648359956275*^9, {3.9076484689023824`*^9, 3.9076485095600357`*^9}, {
-   3.9076485497471094`*^9, 3.907648563225844*^9}},
- CellLabel->
-  "During evaluation of \
-In[107]:=",ExpressionUUID->"6fc26d32-9015-4cb0-a3e2-71884b07648f"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$4589\\\", \\\",\
-\\\", \\\"r0$4589\\\", \\\",\\\", \\\"\[Theta]0$4589\\\", \\\",\\\", \\\"\
-\[Phi]0$4589\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563384842*^9},
- CellLabel->
-  "(kernel 1)",ExpressionUUID->"3d545785-52be-4e44-81f0-1032ecc99a02"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$5543\\\", \\\",\
-\\\", \\\"r0$5543\\\", \\\",\\\", \\\"\[Theta]0$5543\\\", \\\",\\\", \\\"\
-\[Phi]0$5543\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563417843*^9},
- CellLabel->
-  "(kernel 2)",ExpressionUUID->"0b9e38eb-848f-4633-943c-345711c335b1"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2609\\\", \\\",\
-\\\", \\\"r0$2609\\\", \\\",\\\", \\\"\[Theta]0$2609\\\", \\\",\\\", \\\"\
-\[Phi]0$2609\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485634258423`*^9},
- CellLabel->
-  "(kernel 3)",ExpressionUUID->"eef25193-55a1-49d0-a8c8-ae963daddbbe"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2617\\\", \\\",\
-\\\", \\\"r0$2617\\\", \\\",\\\", \\\"\[Theta]0$2617\\\", \\\",\\\", \\\"\
-\[Phi]0$2617\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563444846*^9},
- CellLabel->
-  "(kernel 4)",ExpressionUUID->"2c335702-bd33-42ac-96fd-4658d164c146"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2613\\\", \\\",\
-\\\", \\\"r0$2613\\\", \\\",\\\", \\\"\[Theta]0$2613\\\", \\\",\\\", \\\"\
-\[Phi]0$2613\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563472853*^9},
- CellLabel->
-  "(kernel 5)",ExpressionUUID->"c3250b41-044e-4aff-8af5-fd6735589bba"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2609\\\", \\\",\
-\\\", \\\"r0$2609\\\", \\\",\\\", \\\"\[Theta]0$2609\\\", \\\",\\\", \\\"\
-\[Phi]0$2609\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485634928493`*^9},
- CellLabel->
-  "(kernel 6)",ExpressionUUID->"906c7c22-c769-4788-a226-2f458ff2e06e"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2613\\\", \\\",\
-\\\", \\\"r0$2613\\\", \\\",\\\", \\\"\[Theta]0$2613\\\", \\\",\\\", \\\"\
-\[Phi]0$2613\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485635118437`*^9},
- CellLabel->
-  "(kernel 7)",ExpressionUUID->"9bb63245-9c6c-4b0e-8063-4c9297174664"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2609\\\", \\\",\
-\\\", \\\"r0$2609\\\", \\\",\\\", \\\"\[Theta]0$2609\\\", \\\",\\\", \\\"\
-\[Phi]0$2609\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485635213614`*^9},
- CellLabel->
-  "(kernel 8)",ExpressionUUID->"afc911a6-1b4d-4880-8392-898d33386ec4"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2638\\\", \\\",\
-\\\", \\\"r0$2638\\\", \\\",\\\", \\\"\[Theta]0$2638\\\", \\\",\\\", \\\"\
-\[Phi]0$2638\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485635413175`*^9},
- CellLabel->
-  "(kernel 9)",ExpressionUUID->"536f4d16-74fa-4978-8303-8a11dd227732"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2609\\\", \\\",\
-\\\", \\\"r0$2609\\\", \\\",\\\", \\\"\[Theta]0$2609\\\", \\\",\\\", \\\"\
-\[Phi]0$2609\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485635496607`*^9},
- CellLabel->
-  "(kernel 10)",ExpressionUUID->"d8b33b24-9999-4c9b-be0c-6e80a7f82ece"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$4634\\\", \\\",\
-\\\", \\\"r0$4634\\\", \\\",\\\", \\\"\[Theta]0$4634\\\", \\\",\\\", \\\"\
-\[Phi]0$4634\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485635717525`*^9},
- CellLabel->
-  "(kernel 1)",ExpressionUUID->"1630fe2d-2695-4558-b919-9c69b8e34e78"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$5588\\\", \\\",\
-\\\", \\\"r0$5588\\\", \\\",\\\", \\\"\[Theta]0$5588\\\", \\\",\\\", \\\"\
-\[Phi]0$5588\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485636031046`*^9},
- CellLabel->
-  "(kernel 2)",ExpressionUUID->"4310a7c9-4a9f-41c0-bbd9-8ff15384b88e"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2654\\\", \\\",\
-\\\", \\\"r0$2654\\\", \\\",\\\", \\\"\[Theta]0$2654\\\", \\\",\\\", \\\"\
-\[Phi]0$2654\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485636220264`*^9},
- CellLabel->
-  "(kernel 3)",ExpressionUUID->"c73d8603-a84d-43b8-9904-b84eddb73b47"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2662\\\", \\\",\
-\\\", \\\"r0$2662\\\", \\\",\\\", \\\"\[Theta]0$2662\\\", \\\",\\\", \\\"\
-\[Phi]0$2662\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563630025*^9},
- CellLabel->
-  "(kernel 4)",ExpressionUUID->"102d9d53-e4d5-4e78-8def-a6cb3c9bb03e"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2658\\\", \\\",\
-\\\", \\\"r0$2658\\\", \\\",\\\", \\\"\[Theta]0$2658\\\", \\\",\\\", \\\"\
-\[Phi]0$2658\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485636500187`*^9},
- CellLabel->
-  "(kernel 5)",ExpressionUUID->"c4d74031-a68d-46f9-9b75-f0953730df2a"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2654\\\", \\\",\
-\\\", \\\"r0$2654\\\", \\\",\\\", \\\"\[Theta]0$2654\\\", \\\",\\\", \\\"\
-\[Phi]0$2654\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485636590247`*^9},
- CellLabel->
-  "(kernel 6)",ExpressionUUID->"adabbc65-f8aa-43ca-af1a-f65d6bc51c9e"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2658\\\", \\\",\
-\\\", \\\"r0$2658\\\", \\\",\\\", \\\"\[Theta]0$2658\\\", \\\",\\\", \\\"\
-\[Phi]0$2658\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485636770177`*^9},
- CellLabel->
-  "(kernel 7)",ExpressionUUID->"8db5d325-73df-451d-9941-67209ea99191"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2654\\\", \\\",\
-\\\", \\\"r0$2654\\\", \\\",\\\", \\\"\[Theta]0$2654\\\", \\\",\\\", \\\"\
-\[Phi]0$2654\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563697017*^9},
- CellLabel->
-  "(kernel 8)",ExpressionUUID->"a642b470-0587-49dd-b630-03420650d6ce"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2683\\\", \\\",\
-\\\", \\\"r0$2683\\\", \\\",\\\", \\\"\[Theta]0$2683\\\", \\\",\\\", \\\"\
-\[Phi]0$2683\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485637061257`*^9},
- CellLabel->
-  "(kernel 9)",ExpressionUUID->"bd9278fa-1fc9-4008-b8b2-c9c44fcc3461"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2654\\\", \\\",\
-\\\", \\\"r0$2654\\\", \\\",\\\", \\\"\[Theta]0$2654\\\", \\\",\\\", \\\"\
-\[Phi]0$2654\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563725174*^9},
- CellLabel->
-  "(kernel 10)",ExpressionUUID->"38268db2-a763-4797-8deb-a4e5b266dc6e"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$4679\\\", \\\",\
-\\\", \\\"r0$4679\\\", \\\",\\\", \\\"\[Theta]0$4679\\\", \\\",\\\", \\\"\
-\[Phi]0$4679\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.90764856374442*^9},
- CellLabel->
-  "(kernel 1)",ExpressionUUID->"67beeb19-2e7e-47b6-837e-5b2f2230dc78"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$5633\\\", \\\",\
-\\\", \\\"r0$5633\\\", \\\",\\\", \\\"\[Theta]0$5633\\\", \\\",\\\", \\\"\
-\[Phi]0$5633\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563775257*^9},
- CellLabel->
-  "(kernel 2)",ExpressionUUID->"e6e58f11-7e32-4c61-b176-1860c3dbb4ef"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2699\\\", \\\",\
-\\\", \\\"r0$2699\\\", \\\",\\\", \\\"\[Theta]0$2699\\\", \\\",\\\", \\\"\
-\[Phi]0$2699\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563794457*^9},
- CellLabel->
-  "(kernel 3)",ExpressionUUID->"15e0d19c-8346-441d-a055-565d408d8949"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2707\\\", \\\",\
-\\\", \\\"r0$2707\\\", \\\",\\\", \\\"\[Theta]0$2707\\\", \\\",\\\", \\\"\
-\[Phi]0$2707\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563803419*^9},
- CellLabel->
-  "(kernel 4)",ExpressionUUID->"9596c754-245e-4ef3-9287-6dc3ca480af8"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2703\\\", \\\",\
-\\\", \\\"r0$2703\\\", \\\",\\\", \\\"\[Theta]0$2703\\\", \\\",\\\", \\\"\
-\[Phi]0$2703\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563823497*^9},
- CellLabel->
-  "(kernel 5)",ExpressionUUID->"d5f433f4-9f98-40c1-ab3f-17dbc280fa9e"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2699\\\", \\\",\
-\\\", \\\"r0$2699\\\", \\\",\\\", \\\"\[Theta]0$2699\\\", \\\",\\\", \\\"\
-\[Phi]0$2699\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485638314724`*^9},
- CellLabel->
-  "(kernel 6)",ExpressionUUID->"60d08078-e62d-4eaf-adf8-080025acb05c"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2703\\\", \\\",\
-\\\", \\\"r0$2703\\\", \\\",\\\", \\\"\[Theta]0$2703\\\", \\\",\\\", \\\"\
-\[Phi]0$2703\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485638525014`*^9},
- CellLabel->
-  "(kernel 7)",ExpressionUUID->"f919483e-488b-4add-80cf-20d19d2dd446"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2699\\\", \\\",\
-\\\", \\\"r0$2699\\\", \\\",\\\", \\\"\[Theta]0$2699\\\", \\\",\\\", \\\"\
-\[Phi]0$2699\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485638725004`*^9},
- CellLabel->
-  "(kernel 8)",ExpressionUUID->"90960b0a-9b8e-499d-a597-396517fccf03"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2728\\\", \\\",\
-\\\", \\\"r0$2728\\\", \\\",\\\", \\\"\[Theta]0$2728\\\", \\\",\\\", \\\"\
-\[Phi]0$2728\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485638805046`*^9},
- CellLabel->
-  "(kernel 9)",ExpressionUUID->"78d768d6-26e3-49d0-bb48-cdf60c48d067"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2699\\\", \\\",\
-\\\", \\\"r0$2699\\\", \\\",\\\", \\\"\[Theta]0$2699\\\", \\\",\\\", \\\"\
-\[Phi]0$2699\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485639004855`*^9},
- CellLabel->
-  "(kernel 10)",ExpressionUUID->"2bc51fb6-7d0c-447b-9052-660456e15620"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648563929476*^9},
- CellLabel->
-  "(kernel 1)",ExpressionUUID->"64941a87-eed8-4201-a236-3b48e4e68318"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485639643908`*^9},
- CellLabel->
-  "(kernel 2)",ExpressionUUID->"ba8047a1-5c9b-431d-9c1e-ba79c0be8e8b"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485639853907`*^9},
- CellLabel->
-  "(kernel 3)",ExpressionUUID->"84c82923-49ac-4cd3-8f6c-b649df8d4b6a"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485639936743`*^9},
- CellLabel->
-  "(kernel 4)",ExpressionUUID->"365a318f-78ec-483b-a635-395dcf03bd7b"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485640137067`*^9},
- CellLabel->
-  "(kernel 5)",ExpressionUUID->"b4cdc51b-b7c3-418e-965a-9f6de2265070"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564022718*^9},
- CellLabel->
-  "(kernel 6)",ExpressionUUID->"400fd92f-65c9-4eb0-8e1f-607a7232d265"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485640417004`*^9},
- CellLabel->
-  "(kernel 7)",ExpressionUUID->"0ec5edc5-6916-407c-89dd-2fb4d8eeffd2"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564049698*^9},
- CellLabel->
-  "(kernel 8)",ExpressionUUID->"f2624663-d6a6-4d66-9765-a28e396ca465"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564069686*^9},
- CellLabel->
-  "(kernel 9)",ExpressionUUID->"585b2101-1d3b-4601-a4e5-300bd5ae604e"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485640896997`*^9},
- CellLabel->
-  "(kernel 10)",ExpressionUUID->"37118c7c-fd5b-4314-aa2b-de5c8c95f47f"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$4726\\\", \\\",\
-\\\", \\\"r0$4726\\\", \\\",\\\", \\\"\[Theta]0$4726\\\", \\\",\\\", \\\"\
-\[Phi]0$4726\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564131675*^9},
- CellLabel->
-  "(kernel 1)",ExpressionUUID->"0397eafe-0bb3-400c-95ec-e8235bdc88dd"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$5680\\\", \\\",\
-\\\", \\\"r0$5680\\\", \\\",\\\", \\\"\[Theta]0$5680\\\", \\\",\\\", \\\"\
-\[Phi]0$5680\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564165082*^9},
- CellLabel->
-  "(kernel 2)",ExpressionUUID->"39bb1e41-1915-4800-96fb-be37223e01c2"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2746\\\", \\\",\
-\\\", \\\"r0$2746\\\", \\\",\\\", \\\"\[Theta]0$2746\\\", \\\",\\\", \\\"\
-\[Phi]0$2746\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564186497*^9},
- CellLabel->
-  "(kernel 3)",ExpressionUUID->"56492638-ca09-41f6-bcdd-a281cf13dfda"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2754\\\", \\\",\
-\\\", \\\"r0$2754\\\", \\\",\\\", \\\"\[Theta]0$2754\\\", \\\",\\\", \\\"\
-\[Phi]0$2754\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485641944647`*^9},
- CellLabel->
-  "(kernel 4)",ExpressionUUID->"32348a7a-ce80-4049-a0a1-cd9555ea3e58"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2750\\\", \\\",\
-\\\", \\\"r0$2750\\\", \\\",\\\", \\\"\[Theta]0$2750\\\", \\\",\\\", \\\"\
-\[Phi]0$2750\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485642124877`*^9},
- CellLabel->
-  "(kernel 5)",ExpressionUUID->"faf26c0e-0b57-4359-a2a1-cb89ededcaf8"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2746\\\", \\\",\
-\\\", \\\"r0$2746\\\", \\\",\\\", \\\"\[Theta]0$2746\\\", \\\",\\\", \\\"\
-\[Phi]0$2746\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564221489*^9},
- CellLabel->
-  "(kernel 6)",ExpressionUUID->"edd96d57-a62b-40ba-99a9-91f5c7eb9403"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2750\\\", \\\",\
-\\\", \\\"r0$2750\\\", \\\",\\\", \\\"\[Theta]0$2750\\\", \\\",\\\", \\\"\
-\[Phi]0$2750\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485642414656`*^9},
- CellLabel->
-  "(kernel 7)",ExpressionUUID->"e0302b27-2c8a-49c6-94e7-e8ee54e471d5"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2746\\\", \\\",\
-\\\", \\\"r0$2746\\\", \\\",\\\", \\\"\[Theta]0$2746\\\", \\\",\\\", \\\"\
-\[Phi]0$2746\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564260501*^9},
- CellLabel->
-  "(kernel 8)",ExpressionUUID->"a9c60d80-97b4-4705-944e-635fdb4631ed"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2775\\\", \\\",\
-\\\", \\\"r0$2775\\\", \\\",\\\", \\\"\[Theta]0$2775\\\", \\\",\\\", \\\"\
-\[Phi]0$2775\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485642684927`*^9},
- CellLabel->
-  "(kernel 9)",ExpressionUUID->"0398e4a0-7f55-4347-97f3-25b364cf3e0e"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2746\\\", \\\",\
-\\\", \\\"r0$2746\\\", \\\",\\\", \\\"\[Theta]0$2746\\\", \\\",\\\", \\\"\
-\[Phi]0$2746\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485642874975`*^9},
- CellLabel->
-  "(kernel 10)",ExpressionUUID->"f0c12a30-20a9-4857-bca9-e67fab82ab5a"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$4771\\\", \\\",\
-\\\", \\\"r0$4771\\\", \\\",\\\", \\\"\[Theta]0$4771\\\", \\\",\\\", \\\"\
-\[Phi]0$4771\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485643075137`*^9},
- CellLabel->
-  "(kernel 1)",ExpressionUUID->"ba017996-7e81-4fd3-a522-ff485374f482"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$5725\\\", \\\",\
-\\\", \\\"r0$5725\\\", \\\",\\\", \\\"\[Theta]0$5725\\\", \\\",\\\", \\\"\
-\[Phi]0$5725\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485643531027`*^9},
- CellLabel->
-  "(kernel 2)",ExpressionUUID->"6eb80809-7821-42e4-b7f4-0481922f1c6b"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2791\\\", \\\",\
-\\\", \\\"r0$2791\\\", \\\",\\\", \\\"\[Theta]0$2791\\\", \\\",\\\", \\\"\
-\[Phi]0$2791\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.90764856437202*^9},
- CellLabel->
-  "(kernel 3)",ExpressionUUID->"af03b646-7be0-4840-9a20-a6b88c49a8fa"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2799\\\", \\\",\
-\\\", \\\"r0$2799\\\", \\\",\\\", \\\"\[Theta]0$2799\\\", \\\",\\\", \\\"\
-\[Phi]0$2799\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485643800297`*^9},
- CellLabel->
-  "(kernel 4)",ExpressionUUID->"0bde5548-9f09-4146-9b88-82834c7864f0"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2795\\\", \\\",\
-\\\", \\\"r0$2795\\\", \\\",\\\", \\\"\[Theta]0$2795\\\", \\\",\\\", \\\"\
-\[Phi]0$2795\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564401873*^9},
- CellLabel->
-  "(kernel 5)",ExpressionUUID->"61f4445c-f140-436c-87fb-7ecaeb2e646f"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2791\\\", \\\",\
-\\\", \\\"r0$2791\\\", \\\",\\\", \\\"\[Theta]0$2791\\\", \\\",\\\", \\\"\
-\[Phi]0$2791\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564409336*^9},
- CellLabel->
-  "(kernel 6)",ExpressionUUID->"d3107dc2-dbc2-4d17-b055-695c54131fb3"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2795\\\", \\\",\
-\\\", \\\"r0$2795\\\", \\\",\\\", \\\"\[Theta]0$2795\\\", \\\",\\\", \\\"\
-\[Phi]0$2795\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564430337*^9},
- CellLabel->
-  "(kernel 7)",ExpressionUUID->"4566de25-df56-4144-859f-2a0b5563540f"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2791\\\", \\\",\
-\\\", \\\"r0$2791\\\", \\\",\\\", \\\"\[Theta]0$2791\\\", \\\",\\\", \\\"\
-\[Phi]0$2791\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564450425*^9},
- CellLabel->
-  "(kernel 8)",ExpressionUUID->"60b004d3-d23a-45ab-85ee-90ab6622d876"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2820\\\", \\\",\
-\\\", \\\"r0$2820\\\", \\\",\\\", \\\"\[Theta]0$2820\\\", \\\",\\\", \\\"\
-\[Phi]0$2820\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.907648564459369*^9},
- CellLabel->
-  "(kernel 9)",ExpressionUUID->"5b000ec6-2f86-4bc2-9611-8530f48573ad"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$2791\\\", \\\",\
-\\\", \\\"r0$2791\\\", \\\",\\\", \\\"\[Theta]0$2791\\\", \\\",\\\", \\\"\
-\[Phi]0$2791\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485644823704`*^9},
- CellLabel->
-  "(kernel 10)",ExpressionUUID->"d2ea69b8-8145-4805-8937-ae403e26408c"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Set", "::", "shape"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"t0$4816\\\", \\\",\
-\\\", \\\"r0$4816\\\", \\\",\\\", \\\"\[Theta]0$4816\\\", \\\",\\\", \\\"\
-\[Phi]0$4816\\\"}], \\\"}\\\"}]\\) and \
-\\!\\(\\*RowBox[{RowBox[{\\\"KerrGeodesics`KerrGeoOrbit`KerrGeoOrbit\\\", \
-\\\"[\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"10.`32.\\\", \\\",\\\", \
-\\\"0.1000000000000000055511151231257827021181583404541015625`32.\\\", \
-\\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\"[\\\", \
-\\\"\\\\\\\"Trajectory\\\\\\\"\\\", \\\"]\\\"}]\\) are not the same \
-shape.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485645246935`*^9},
- CellLabel->
-  "(kernel 1)",ExpressionUUID->"ef1770fc-44ca-4224-b54d-1e8f9105cd02"],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], " ", ":", 
-  "  ", "\<\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Set\\\", \
-\\\"::\\\", \\\"shape\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"\>"}]], "Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.9076485645713882`*^9},
- CellLabel->
-  "(kernel 1)",ExpressionUUID->"cc6b3cda-8770-4fe4-8b43-ef5b6ebd3c69"]
+   RowBox[{"-", "0.0007979368713145878`"}], ",", 
+   RowBox[{"-", "0.0008078294304765557`"}], ",", 
+   RowBox[{"-", "0.0008176836087203262`"}], ",", 
+   RowBox[{"-", "0.0008274996076922443`"}], ",", 
+   RowBox[{"-", "0.0008372776109712273`"}], ",", 
+   RowBox[{"-", "0.0008470177840413294`"}], ",", 
+   RowBox[{"-", "0.0008567202744319945`"}], ",", 
+   RowBox[{"-", "0.000866385215653006`"}], ",", 
+   RowBox[{"-", "0.0008760127248053063`"}], ",", 
+   RowBox[{"-", "0.0008856029057961169`"}], ",", 
+   RowBox[{"-", "0.0008951558496768532`"}], ",", 
+   RowBox[{"-", "0.0009046716355253393`"}], ",", 
+   RowBox[{"-", "0.0009141503312419772`"}], ",", 
+   RowBox[{"-", "0.0009235919942509127`"}], ",", 
+   RowBox[{"-", "0.0009329966722838971`"}], ",", 
+   RowBox[{"-", "0.0009423644038497523`"}], ",", 
+   RowBox[{"-", "0.0009516952190129149`"}], ",", 
+   RowBox[{"-", "0.0009609891391118748`"}], ",", 
+   RowBox[{"-", "0.000970246178917988`"}], ",", 
+   RowBox[{"-", "0.0009794663457581582`"}], ",", 
+   RowBox[{"-", "0.0009886496404186648`"}], ",", 
+   RowBox[{"-", "0.0009977960574784968`"}], ",", 
+   RowBox[{"-", "0.0010069055867878648`"}], ",", 
+   RowBox[{"-", "0.0010159782101686347`"}], ",", 
+   RowBox[{"-", "0.0010250139061611025`"}], ",", 
+   RowBox[{"-", "0.001034012648415085`"}], ",", 
+   RowBox[{"-", "0.0010429744063087559`"}], ",", 
+   RowBox[{"-", "0.0010518991451175662`"}], ",", 
+   RowBox[{"-", "0.0010607868254553336`"}], ",", 
+   RowBox[{"-", "0.0010696374041736245`"}], ",", 
+   RowBox[{"-", "0.001078450835839367`"}], ",", 
+   RowBox[{"-", "0.0010872270705904695`"}], ",", 
+   RowBox[{"-", "0.0010959660563278151`"}], ",", 
+   RowBox[{"-", "0.0011046677377177226`"}], ",", 
+   RowBox[{"-", "0.0011133320569266792`"}], ",", 
+   RowBox[{"-", "0.0011219589536635758`"}], ",", 
+   RowBox[{"-", "0.0011305483654711849`"}], ",", 
+   RowBox[{"-", "0.0011391002276719615`"}], ",", 
+   RowBox[{"-", "0.001147614472953333`"}], ",", 
+   RowBox[{"-", "0.0011560910330377565`"}], ",", 
+   RowBox[{"-", "0.001164529837578572`"}], ",", 
+   RowBox[{"-", "0.0011729308146218762`"}], ",", 
+   RowBox[{"-", "0.0011812938907183206`"}], ",", 
+   RowBox[{"-", "0.0011896189910418525`"}], ",", 
+   RowBox[{"-", "0.001197906039500865`"}], ",", 
+   RowBox[{"-", "0.0012061549588245754`"}], ",", 
+   RowBox[{"-", "0.0012143656706078416`"}], ",", 
+   RowBox[{"-", "0.0012225380967967828`"}], ",", 
+   RowBox[{"-", "0.001230672154796754`"}], ",", 
+   RowBox[{"-", "0.0012387677650883865`"}], ",", 
+   RowBox[{"-", "0.00124682484507852`"}], ",", "0.0011418180157901961`", ",", 
+   "0.0011496362913245844`", ",", "0.0011574879162550647`", ",", 
+   "0.0011653728463145694`", ",", "0.001173291025671199`", ",", 
+   "0.0011812423905643594`", ",", "0.0011892268693758958`", ",", 
+   "0.0011972443823133048`", ",", "0.0012052948429431918`", ",", 
+   "0.001213378157967954`", ",", "0.0012214942277476032`", ",", 
+   "0.0012296429466335706`", ",", "0.0012378242034037418`", ",", 
+   "0.0012460378815444101`", ",", "0.001254283859469483`", ",", 
+   "0.001262562011050492`", ",", "0.0012708722052317421`", ",", 
+   "0.0012792143075668137`", ",", "0.0012875881788025339`", ",", 
+   "0.0012959936762130585`", ",", "0.0013044306533600812`", ",", 
+   "0.001312898960317607`", ",", "0.001321398443350587`", ",", 
+   "0.001329928947724253`", ",", "0.0013384903134226528`", ",", 
+   "0.001347082378551382`", ",", "0.0013557049778666014`", ",", 
+   "0.0013643579444575454`", ",", "0.0013730411085394675`", ",", 
+   "0.0013817542989613982`", ",", "0.001390497339408031`", ",", 
+   "0.0013992700543293004`", ",", "0.0014080722650470733`", ",", 
+   "0.0014169037909605223`", ",", "0.0014257644495957022`", ",", 
+   "0.0014346540566145991`", ",", "0.0014435724259381582`", ",", 
+   "0.0014525193695252255`", ",", "0.0014614946984534893`", ",", 
+   "0.0014704982215265792`", ",", "0.001479529746269363`", ",", 
+   "0.0014885890787522504`", ",", "0.001497676023646806`", ",", 
+   "0.0015067903842710271`", ",", "0.0015159319626369418`", ",", 
+   "0.0015251005594975955`", ",", "0.001534295974307193`", ",", 
+   "0.0015435180045492755`", ",", "0.0015527664493892224`", ",", 
+   "0.0015620411041064799`", ",", "0.0015713417634514396`", ",", 
+   RowBox[{"-", "0.0003019054659220509`"}], ",", 
+   RowBox[{"-", "0.00028725637469321813`"}], ",", 
+   RowBox[{"-", "0.00027352976858116486`"}], ",", 
+   RowBox[{"-", "0.00026065292474614495`"}], ",", 
+   RowBox[{"-", "0.0002485599591070921`"}], ",", 
+   RowBox[{"-", "0.00023719108128426915`"}], ",", 
+   RowBox[{"-", "0.00022649194598829675`"}], ",", 
+   RowBox[{"-", "0.00021641307851239967`"}], ",", 
+   RowBox[{"-", "0.00020690937853672044`"}], ",", 
+   RowBox[{"-", "0.00019793966000636006`"}], ",", 
+   RowBox[{"-", "0.000189466267081727`"}], ",", 
+   RowBox[{"-", "0.00018145473006451581`"}], ",", 
+   RowBox[{"-", "0.00017387343961535107`"}], ",", 
+   RowBox[{"-", "0.00016669338048517013`"}], ",", 
+   RowBox[{"-", "0.00015988788291502055`"}], ",", 
+   RowBox[{"-", "0.0001534324055551146`"}], ",", 
+   RowBox[{"-", "0.0001473043366077718`"}], ",", 
+   RowBox[{"-", "0.00014148281894121024`"}], ",", 
+   RowBox[{"-", "0.00013594858989955696`"}], ",", 
+   RowBox[{"-", "0.00013068384430939647`"}], ",", 
+   RowBox[{"-", "0.0001256721018124557`"}], ",", 
+   RowBox[{"-", "0.00012089809621626412`"}], ",", 
+   RowBox[{"-", "0.00011634767015198247`"}], ",", 
+   RowBox[{"-", "0.00011200768121908475`"}], ",", 
+   RowBox[{"-", "0.00010786591803328681`"}], ",", 
+   RowBox[{"-", "0.00010391101903231746`"}], ",", 
+   RowBox[{"-", "0.00010013242248039593`"}], ",", 
+   RowBox[{"-", "0.00009652027038047587`"}], ",", 
+   RowBox[{"-", "0.00009306537995064526`"}], ",", 
+   RowBox[{"-", "0.00008975917263132611`"}], ",", 
+   RowBox[{"-", "0.00008659364212648239`"}], ",", 
+   RowBox[{"-", "0.00008356130095743766`"}], ",", 
+   RowBox[{"-", "0.0000806551430498147`"}], ",", 
+   RowBox[{"-", "0.00007786861002587673`"}], ",", 
+   RowBox[{"-", "0.00007519555421731679`"}], ",", 
+   RowBox[{"-", "0.00007263021125583576`"}], ",", 
+   RowBox[{"-", "0.00007016717237932335`"}], ",", 
+   RowBox[{"-", "0.00006780135532536333`"}], ",", 
+   RowBox[{"-", "0.00006552798690619882`"}], ",", 
+   RowBox[{"-", "0.00006334257706322514`"}], ",", 
+   RowBox[{"-", "0.0000612409005559491`"}], ",", 
+   RowBox[{"-", "0.000059218978248716165`"}], ",", 
+   RowBox[{"-", "0.00005727306098309723`"}], ",", 
+   RowBox[{"-", "0.000055399613693684875`"}], ",", 
+   RowBox[{"-", "0.000053595301122946915`"}], ",", 
+   RowBox[{"-", "0.000051856971728238036`"}], ",", 
+   RowBox[{"-", "0.00005018165782765917`"}], ",", 
+   RowBox[{"-", "0.00004856654481189433`"}], ",", 
+   RowBox[{"-", "0.00004700897435107417`"}], ",", 
+   RowBox[{"-", "0.00004550643107126867`"}], ",", 
+   RowBox[{"-", "0.00004405653355162082`"}], ",", "0.0011332168128431485`", 
+   ",", "0.0010529377145835205`", ",", "0.000979468356193744`", ",", 
+   "0.0009121310131390218`", ",", "0.0008503252438570458`", ",", 
+   "0.0007935179856101011`", ",", "0.00074123505503797`", ",", 
+   "0.0006930538368782026`", ",", "0.0006485969728137852`", ",", 
+   "0.0006075269192088178`", ",", "0.0005695412107666431`", ",", 
+   "0.0005343683736662258`", ",", "0.0005017643377219636`", ",", 
+   "0.0004715093274316007`", ",", "0.0004434051441997736`", ",", 
+   "0.0004172727764321709`", ",", "0.00039295031042469`", ",", 
+   "0.0003702910914485418`", ",", "0.0003491621019622638`", ",", 
+   "0.0003294425364675716`", ",", "0.0003110225345597303`", ",", 
+   "0.00029380206869190445`", ",", "0.00027768994694440924`", ",", 
+   "0.0002626029368317691`", ",", "0.000248464981344775`", ",", 
+   "0.00023520650127366224`", ",", "0.00022276377515777307`", ",", 
+   "0.00021107837973659665`", ",", "0.00020009669681568835`", ",", 
+   "0.00018976946456519334`", ",", "0.00018005138101660892`", ",", 
+   "0.00017090074341289012`", ",", "0.00016227912579706331`", ",", 
+   "0.00015415108960054624`", ",", "0.00014648392002593699`", ",", 
+   "0.00013924739094518413`", ",", "0.00013241355046790152`", ",", 
+   "0.00012595652998943145`", ",", "0.00011985236564219982`", ",", 
+   "0.00011407884235593274`", ",", "0.00010861534915814054`", ",", 
+   "0.00010344274842711431`", ",", "0.00009854325705419909`", ",", 
+   "0.00009390033816313529`", ",", "0.00008949860256966448`", ",", 
+   "0.00008532372183393045`", ",", "0.00008136233358435048`", ",", 
+   "0.00007760198632815461`", ",", "0.00007403105699866173`", ",", 
+   "0.00007063869182669815`", ",", "0.00006741474885600007`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9076563669329634`*^9, 3.907656883130809*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"28258f8a-53ae-43d0-9701-453426b3b139"]
 }, Open  ]],
 
-Cell[BoxData["$Aborted"], "Output",
- CellChangeTimes->{3.907648553055293*^9, 3.907648590937767*^9},
- CellLabel->
-  "Out[107]=",ExpressionUUID->"cd547e9e-1518-49fa-b13e-61669c489a27"]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.907648396779828*^9, 
-  3.9076483990572824`*^9}},ExpressionUUID->"ec2cebf8-0343-474c-af1d-\
-4c804154784c"],
+Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"ClearAll", "[", 
-  RowBox[{"lower\[CapitalPhi]0", ",", " ", "upper\[CapitalPhi]0"}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.9076485946736403`*^9, 3.9076486074132624`*^9}},
- CellLabel->
-  "In[108]:=",ExpressionUUID->"86a80f31-93f8-45d1-b609-8dfd742ce8f2"]
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"lowerRs", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+         RowBox[{"Re", "[", 
+          RowBox[{"lower\[CapitalPhi]0", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", " ", 
+         RowBox[{"1", " ", 
+          RowBox[{"Length", "[", "lowerRs", "]"}]}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"lowerRs", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+         RowBox[{"Im", "[", 
+          RowBox[{"lower\[CapitalPhi]0", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", " ", 
+         RowBox[{"1", " ", 
+          RowBox[{"Length", "[", "lowerRs", "]"}]}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"upperRs", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+         RowBox[{"Re", "[", 
+          RowBox[{"upper\[CapitalPhi]0", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", " ", 
+         RowBox[{"1", " ", 
+          RowBox[{"Length", "[", "upperRs", "]"}]}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"upperRs", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+         RowBox[{"Im", "[", 
+          RowBox[{"upper\[CapitalPhi]0", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", " ", 
+         RowBox[{"1", " ", 
+          RowBox[{"Length", "[", "upperRs", "]"}]}]}], "}"}]}], "]"}]}], " ", 
+    "}"}], ",", " ", 
+   RowBox[{"Joined", "->", "True"}], ",", " ", 
+   RowBox[{"PlotStyle", "->", 
+    RowBox[{"{", 
+     RowBox[{"Blue", ",", " ", "Red", ",", "Blue", ",", "Red"}], "}"}]}], ",",
+    "\[IndentingNewLine]", 
+   RowBox[{"Epilog", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Directive", "[", "lineStyle", "]"}], ",", "line1", ",", 
+      "line2"}], "}"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.907654620314211*^9, 3.9076546658875823`*^9}, {
+  3.907654717687132*^9, 3.907654833470179*^9}, {3.9076556593811407`*^9, 
+  3.907655691376548*^9}, {3.9076557407680635`*^9, 3.907655744809928*^9}, {
+  3.907655782348336*^9, 3.907655830837577*^9}, {3.907655883910292*^9, 
+  3.9076559450686784`*^9}, {3.907656021189026*^9, 3.907656022228875*^9}, {
+  3.907656909024779*^9, 3.907656913705063*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"86ccfe9a-aba6-440f-8ea5-5b8ec3a0144f"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0, 0, 1], PointSize[0.009166666666666668], AbsoluteThickness[
+     1.6], LineBox[CompressedData["
+1:eJwBQQO+/CFib1JlAgAAADMAAAACAAAAzczMzMzMGEB17B5ilCVKv6HkTH0B
+CBlAF8kIfpB4Sr92/MwtNkMZQJee0C06y0q/SxRN3mp+GUAvoFHgkR1LvyEs
+zY6fuRlAbT14+pdvS7/1Q00/1PQZQLdFPtdMwUu/ylvN7wgwGkBwpb7HsBJM
+v55zTaA9axpAejFfFcRjTL90i81QcqYaQOxngACHtEy/SaNNAafhGkD37EHC
++QRNvx67zbHbHBtAkRmyjBxVTb/y0k1iEFgbQJokSovvpE2/yOrNEkWTG0Df
+L17jcvRNv5wCTsN5zhtARfZ/tKZDTr9wGs5zrgkcQGAd7RiLkk6/RTJOJONE
+HEC2R9ElIOFOvxpKztQXgBxAxaaz62UvT7/uYU6FTLscQKpaT3ZcfU+/xHnO
+NYH2HECWRcPNA8tPv5iRTua1MR1AiEkL+y0MUL9tqc6W6mwdQOX123eyMlC/
+QsFORx+oHUCiL9ZbD1lQvxfZzvdT4x1AZbwvpER/UL/s8E6oiB4eQAdw6UtS
+pVC/wQjPWL1ZHkDfMh1NOMtQv5YgTwnylB5AOsqMoPbwUL9qOM+5JtAeQE9k
+zT2NFlG/QFBPalsLH0BCe1Mb/DtRvxRozxqQRh9AsIBLLkNhUb/of0/LxIEf
+QIUn2WpihlG/vpfPe/m8H0BLXn/EWatRv5KvTywu+B9Aa2mJLSnQUb+042du
+sRkgQKQipZfQ9FG/nu+nxks3IED6xpzzTxlSv4j75x7mVCBAe6qKMac9Ur9z
+Byh3gHIgQBYx3EDWYVK/XRNozxqQIEBoUWYQ3YVSv0gfqCe1rSBAX8Rhjrup
+Ur8yK+h/T8sgQHrWTahxzVK/HDco2OnoIEDZ7GVL//BSvwdDaDCEBiFAudJT
+ZGQUU7/yTqiIHiQhQNE5UN+gN1O/3Fro4LhBIUBKmCqotFpTv8ZmKDlTXyFA
+z4NRqp99U7+wcmiR7XwhQNmD2tBhoFO/m36o6YeaIUC8JYgG+8JTv4aK6EEi
+uCFA/iPNNWvlU79wliiavNUhQOjwNEmyB1S/WqJo8lbzIUCgdwsq0ClUv0Wu
+qErxECJAjwp1wsRLVL8vuuiiiy4iQJmvvfuPbVS/eE6AMw==
+      "]]}, 
+    {RGBColor[1, 0, 0], PointSize[0.009166666666666668], AbsoluteThickness[
+     1.6], LineBox[CompressedData["
+1:eJwBQQO+/CFib1JlAgAAADMAAAACAAAAzczMzMzMGECWlkrCIbVSP6HkTH0B
+CBlA/ZOBkezVUj92/MwtNkMZQKWwuy/b9lI/SxRN3mp+GUD1582Q7RdTPyEs
+zY6fuRlA1mdfpSM5Uz/1Q00/1PQZQIhv6Vt9WlM/ylvN7wgwGkAQUbyg+ntT
+P55zTaA9axpAeibpXZudUz90i81QcqYaQCi6rXtfv1M/SaNNAafhGkDoz2Tg
+RuFTPx67zbHbHBtARd2qcFEDVD/y0k1iEFgbQNSGdQ9/JVQ/yOrNEkWTG0AX
+PTKez0dUP5wCTsN5zhtAthPa/EJqVD9wGs5zrgkcQF0uAQrZjFQ/RTJOJONE
+HECPDPyika9UPxpKztQXgBxAx3TEo2zSVD/uYU6FTLscQKOTZedp9VQ/xHnO
+NYH2HED9VphHiRhVP5iRTua1MR1AmU4hnco7VT9tqc6W6mwdQHXMv78tX1U/
+QsFORx+oHUDytT2GsoJVPxfZzvdT4x1AoeZYxlimVT/s8E6oiB4eQLrgiFUg
+ylU/wQjPWL1ZHkAchdEHCe5VP5YgTwnylB5AdoWysBISVj9qOM+5JtAeQGnh
+vyI9NlY/QFBPalsLH0DpSxgwiFpWPxRozxqQRh9A4DoQqvN+Vj/of0/LxIEf
+QIkAnGF/o1Y/vpfPe/m8H0CzhkQmK8hWP5KvTywu+B9AhpDIx/bsVj+042du
+sRkgQOvCChXiEVc/nu+nxks3IECbdmbc7DZXP4j75x7mVCBAODWz6xZcVz9z
+Byh3gHIgQFFcRRBggVc/XRNozxqQIECmxfYWyKZXP0gfqCe1rSBA7zgXzE7M
+Vz8yK+h/T8sgQFx8uPvz8Vc/HDco2OnoIEBRUExxtxdYPwdDaDCEBiFAEnnq
+95g9WD/yTqiIHiQhQLNhRFqYY1g/3Fro4LhBIUDtBalitYlYP8ZmKDlTXyFA
+xyEI2++vWD+wcmiR7XwhQAaL9YxH1lg/m36o6YeaIUCgf6xBvPxYP4aK6EEi
+uCFAtdcMwk0jWT9wliiavNUhQBO/a9b7SVk/WqJo8lbzIUDXupRHxnBZP0Wu
+qErxECJAXd1B3ayXWT8vuuiiiy4iQGj+B1+vvlk/NBluqA==
+      "]]}, 
+    {RGBColor[0, 0, 1], PointSize[0.009166666666666668], AbsoluteThickness[
+     1.6], LineBox[CompressedData["
+1:eJwtkntIU2EYxkegK+fUac5mS91c7q7n7IRpTn3LC2mYXdCIqVhpZli58Fqp
+YJBlIWT9UWLetQtaRjYii1dXpka6NEtFsqJMIjUKxTCIdr7Oj+dw/vr4zu85
+j+zgiT2Zq3g8HmN/2HfV5xB7AqBxS4y3fJDBiG9X7AmAMavfk5Q3BvyxwBIA
+i0JJtmiexrrFuPrFOCXsOFM9yPekMXGlxR4lvJ42zijiKeQRVCBa6PlgEwdh
+p4PJHhWsZOfwbPf0eEBgSRdYVGDenUfVperQTcSihrkOmv/YR4u94hx71HDJ
+dqm756caT0r7zdJ+NRy7nDd+/K0K5QQNmGbCo2oHlDiqLLFHA/F3jMWhLwOw
+XD9hjwbKnocZEyY3IkPQQm2LLe/XogKJbpUWkqp/702WKvAqEdbCZu+JG5ad
+/hhN0EH/tFSdflGORLdeB8I2LO0YkWELEdZB5Rdru4NMhkkEPajv5sunivzQ
+kdXt1EPrvqhTSfd9kbVNFwQCXTzYs1Tmg1mHWQJhJLQm8WHKBiS6vYGwrC1O
+scZKkbU1S4Og8sgjy/7w9VhUyBIEzTXJ3/sivVHF6o4GwemhzLrUBAmS42IK
+8ruuCc9mruO+n4KqT/yJpgovJPWZKehOazYzD8S4RHwoaGvwD+ma9cShVywU
+BGtKh9sVnthK/CjIkrSdb89ei+Q6JQ03t34ciLN4YDLxpWFsNrhC5uSBpO5y
+GtLiO8bfZbhz/jQkNxqPur8Q4fR7FhpksXREuV7E9WEA3S0XarLGDf/vzwAD
+Xx1vDwvduH4M8Fdsum50dsVIskcDeM65Z7jyXdCLCBugod0cVisQcvs0QJlL
+2LlciTPXHwMF89o/vpQAG8gPZODQ021N0YlOSOosZOCCdaGvpGAN7iL7ZaBq
+e4xrbutqrl8Gcp7Z3Pqm+NyeN4FJZVrWSPj4DzGZZ2A=
+      "]]}, 
+    {RGBColor[1, 0, 0], PointSize[0.009166666666666668], AbsoluteThickness[
+     1.6], LineBox[CompressedData["
+1:eJwtkm1IE3Ecx0elb2aaT9Nsy+lsm5vbbncaWurvt/mAMzKTSnEJammSwVqW
+D5WQy560DEu0sKXJCp8IQSb0aBI5syIyhd5MMcGK0qB0lhB19+8+fI97cRx3
+n+//G1FsySlZIxAIGPbi7k1z8Wzk2PCy0+TbnAPJX66zkeOTBmlKLu6G74sc
+csyX9Mkon2y4vWTqWDIpcFR3xmKb2wm7Vh1sFNhwra5J6N4BAoIS6xrXztsE
+mTDgZWajxPYVj3LRlAFFwqFC4ZASF4zRYyPOdNjgzxGN++/3H3yPaTAiOsIm
+Gr0GF8KzPqfAMbHLKnaxz+XTlu4eI0QSVJibpc1rtxlgQlHLRoVnU9zOMCuC
+TfOBjQof9Eqi7PPJwBDUqFvnbgvzSwKi26RGS6JjoT9vO7QQYTUGJlY8uvUs
+AVIJMZjucEqPp8YD0e2IwbIA0duV2a3gIMIx2Oi88FXaFgd7CRo8MQD2kOJY
+8OZ0BzTYd2M8XWtggLMtFGrxz3JLkpum4VAphxZx5qL3cJweiO6IFmWW4F+X
+MyjgbK1iHU6XKCvjJ7VQXcWhQ5m3v3GI1oCS053Q4RXPWI29Vw3kdRGFR+Xd
+lyK2qfj/pzDr+QtT+4wSSH1WCrVPfVrP3VTAMvGhEJYUcSdL5fDmNQeFBmd9
+oC5tC9wlfhROVc+PVsRGAfmcQs+e72CmjpHBPuKrR+sdz2oBRgKp26bHSsPk
+Yz9zBO+vx9CervxSmxSm3Rx6HC6/6lGUh/N90JhjtLcOfpLA//3RaJ48XLu+
+Rsz3Q6NP17uP3ySbAMgeaezMnE2RTm2EECJMY3nBvfON9lB+nzT+fOjKkFeG
+8P0x+MokLVotEEEnOUAGD2w2Q+SeYCB1VjH4ty/htys3CLLJfhkMNvyYkZUF
+8v0y6KuSnT5VH8DvORaDxgXN0n5/+AeTHU5b
+      "]]}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{5.912500000000014, 0},
+  DisplayFunction->Identity,
+  Epilog->{
+    Directive[{
+      Thickness[Large], 
+      GrayLevel[0], 
+      Dashing[{Small, Small}]}], 
+    LineBox[{{9.090909090909092, -0.00124682484507852}, {9.090909090909092, 
+     0.0015713417634514396`}}], 
+    LineBox[{{11.11111111111111, -0.00124682484507852}, {11.11111111111111, 
+     0.0015713417634514396`}}]},
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{387.49999999999704`, Automatic},
+  Method->{
+   "OptimizePlotMarkers" -> True, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}},
+  PlotRange->{{5.912500000000014, 20.}, {-0.00124682484507852, 
+   0.0015713417634514396`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.9076546580744095`*^9, 3.9076546664718466`*^9}, 
+   3.9076547222951765`*^9, {3.9076547631745615`*^9, 3.9076547795757833`*^9}, {
+   3.90765482393054*^9, 3.9076548339163675`*^9}, 3.9076556955545197`*^9, 
+   3.9076557452272143`*^9, 3.907655812127144*^9, 3.9076559454816294`*^9, 
+   3.907655980903284*^9, 3.9076560227359204`*^9, 3.907656383689867*^9, 
+   3.907656914465328*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"9ec9e5af-9646-414e-8802-f6d1e9eb98e4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["rmin"], "Input",
+ CellChangeTimes->{{3.907655970340026*^9, 3.9076559707214737`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"669dd0cf-3ad1-4a96-9f2e-5aa8bb516df1"],
+
+Cell[BoxData["9.090909090909092`"], "Output",
+ CellChangeTimes->{{3.9076559713074293`*^9, 3.9076559834183855`*^9}},
+ CellLabel->"Out[31]=",ExpressionUUID->"710dff65-f78b-46fc-bb3f-9a65b9a58516"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1428., 741.75},
@@ -2525,98 +1910,44 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 153, 3, 102, "Chapter",ExpressionUUID->"56011934-84d5-40b4-bcd4-767306470ed6"],
 Cell[CellGroupData[{
-Cell[758, 29, 945, 14, 157, "Input",ExpressionUUID->"4022332e-084b-4bec-9cec-472b7a30486a"],
-Cell[1706, 45, 8206, 196, 390, "Output",ExpressionUUID->"5b9f0054-bc8d-4f35-8e69-34d1d698f846"]
+Cell[758, 29, 1439, 26, 271, "Input",ExpressionUUID->"4022332e-084b-4bec-9cec-472b7a30486a"],
+Cell[2200, 57, 8260, 197, 390, "Output",ExpressionUUID->"f6e97452-173a-4a20-8fd7-0d6e850429d5"]
 }, Open  ]],
-Cell[9927, 244, 26152, 642, 2177, "Input",ExpressionUUID->"5ca4fc0a-8b2d-4322-b903-3d0be4c9605f"]
+Cell[10475, 257, 26152, 642, 2177, "Input",ExpressionUUID->"5ca4fc0a-8b2d-4322-b903-3d0be4c9605f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36116, 891, 341, 10, 102, "Chapter",ExpressionUUID->"ab927d55-147e-4f84-97ba-d7a4611fec70"],
+Cell[36664, 904, 341, 10, 102, "Chapter",ExpressionUUID->"ab927d55-147e-4f84-97ba-d7a4611fec70"],
 Cell[CellGroupData[{
-Cell[36482, 905, 401, 11, 100, "Section",ExpressionUUID->"ca2eaacd-7b98-45ba-9611-fcc9c1a6de56"],
-Cell[36886, 918, 5439, 128, 458, "Input",ExpressionUUID->"90280de5-bc8c-4835-8db2-9a9a409808e6"]
+Cell[37030, 918, 401, 11, 100, "Section",ExpressionUUID->"ca2eaacd-7b98-45ba-9611-fcc9c1a6de56"],
+Cell[37434, 931, 5439, 128, 458, "Input",ExpressionUUID->"90280de5-bc8c-4835-8db2-9a9a409808e6"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42374, 1052, 454, 14, 102, "Chapter",ExpressionUUID->"8b78eec9-4443-45ba-9017-52b7ad545782"],
-Cell[42831, 1068, 1043, 28, 111, "Input",ExpressionUUID->"8e60aa0b-2a2b-44a0-8140-6308d3f3d638"],
-Cell[43877, 1098, 265, 5, 42, "Input",ExpressionUUID->"79af36db-faf0-4b96-90d5-d99a6c2282ba"],
-Cell[44145, 1105, 9474, 209, 1049, "Input",ExpressionUUID->"46d35036-b753-4161-9ea2-9eeea1b6d281"],
+Cell[42922, 1065, 454, 14, 102, "Chapter",ExpressionUUID->"8b78eec9-4443-45ba-9017-52b7ad545782"],
+Cell[43379, 1081, 1043, 28, 111, "Input",ExpressionUUID->"8e60aa0b-2a2b-44a0-8140-6308d3f3d638"],
+Cell[44425, 1111, 265, 5, 42, "Input",ExpressionUUID->"79af36db-faf0-4b96-90d5-d99a6c2282ba"],
+Cell[44693, 1118, 11097, 228, 1049, "Input",ExpressionUUID->"46d35036-b753-4161-9ea2-9eeea1b6d281"],
 Cell[CellGroupData[{
-Cell[53644, 1318, 367, 8, 42, "Input",ExpressionUUID->"b6e90873-008e-4bd5-a905-944c10d27058"],
-Cell[54014, 1328, 355, 9, 48, "Output",ExpressionUUID->"6f9342b5-7993-40ef-a2f9-bfb76210504b"]
+Cell[55815, 1350, 474, 10, 42, "Input",ExpressionUUID->"b6e90873-008e-4bd5-a905-944c10d27058"],
+Cell[56292, 1362, 383, 10, 48, "Output",ExpressionUUID->"fc629eb2-e8ab-4199-835b-3ebc577168fc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[54406, 1342, 2575, 58, 243, "Input",ExpressionUUID->"239fd6d4-fa3b-44de-8fc8-1cbe5e57307e"],
+Cell[56712, 1377, 2726, 60, 243, "Input",ExpressionUUID->"239fd6d4-fa3b-44de-8fc8-1cbe5e57307e"],
+Cell[59441, 1439, 472, 9, 54, "Print",ExpressionUUID->"0ffe03ee-0233-4716-b337-1f1c09846a8b"]
+}, Open  ]],
+Cell[59928, 1451, 418, 9, 42, "Input",ExpressionUUID->"ec2cebf8-0343-474c-af1d-4c804154784c"],
 Cell[CellGroupData[{
-Cell[57006, 1404, 1721, 29, 134, "Print",ExpressionUUID->"6fc26d32-9015-4cb0-a3e2-71884b07648f"],
-Cell[58730, 1435, 805, 16, 86, "Print",ExpressionUUID->"3d545785-52be-4e44-81f0-1032ecc99a02"],
-Cell[59538, 1453, 805, 16, 86, "Print",ExpressionUUID->"0b9e38eb-848f-4633-943c-345711c335b1"],
-Cell[60346, 1471, 807, 16, 86, "Print",ExpressionUUID->"eef25193-55a1-49d0-a8c8-ae963daddbbe"],
-Cell[61156, 1489, 805, 16, 86, "Print",ExpressionUUID->"2c335702-bd33-42ac-96fd-4658d164c146"],
-Cell[61964, 1507, 805, 16, 86, "Print",ExpressionUUID->"c3250b41-044e-4aff-8af5-fd6735589bba"],
-Cell[62772, 1525, 807, 16, 86, "Print",ExpressionUUID->"906c7c22-c769-4788-a226-2f458ff2e06e"],
-Cell[63582, 1543, 807, 16, 86, "Print",ExpressionUUID->"9bb63245-9c6c-4b0e-8063-4c9297174664"],
-Cell[64392, 1561, 807, 16, 86, "Print",ExpressionUUID->"afc911a6-1b4d-4880-8392-898d33386ec4"],
-Cell[65202, 1579, 807, 16, 86, "Print",ExpressionUUID->"536f4d16-74fa-4978-8303-8a11dd227732"],
-Cell[66012, 1597, 808, 16, 107, "Print",ExpressionUUID->"d8b33b24-9999-4c9b-be0c-6e80a7f82ece"],
-Cell[66823, 1615, 807, 16, 86, "Print",ExpressionUUID->"1630fe2d-2695-4558-b919-9c69b8e34e78"],
-Cell[67633, 1633, 807, 16, 86, "Print",ExpressionUUID->"4310a7c9-4a9f-41c0-bbd9-8ff15384b88e"],
-Cell[68443, 1651, 807, 16, 86, "Print",ExpressionUUID->"c73d8603-a84d-43b8-9904-b84eddb73b47"],
-Cell[69253, 1669, 805, 16, 86, "Print",ExpressionUUID->"102d9d53-e4d5-4e78-8def-a6cb3c9bb03e"],
-Cell[70061, 1687, 807, 16, 86, "Print",ExpressionUUID->"c4d74031-a68d-46f9-9b75-f0953730df2a"],
-Cell[70871, 1705, 807, 16, 86, "Print",ExpressionUUID->"adabbc65-f8aa-43ca-af1a-f65d6bc51c9e"],
-Cell[71681, 1723, 807, 16, 86, "Print",ExpressionUUID->"8db5d325-73df-451d-9941-67209ea99191"],
-Cell[72491, 1741, 805, 16, 86, "Print",ExpressionUUID->"a642b470-0587-49dd-b630-03420650d6ce"],
-Cell[73299, 1759, 807, 16, 86, "Print",ExpressionUUID->"bd9278fa-1fc9-4008-b8b2-c9c44fcc3461"],
-Cell[74109, 1777, 806, 16, 107, "Print",ExpressionUUID->"38268db2-a763-4797-8deb-a4e5b266dc6e"],
-Cell[74918, 1795, 804, 16, 86, "Print",ExpressionUUID->"67beeb19-2e7e-47b6-837e-5b2f2230dc78"],
-Cell[75725, 1813, 805, 16, 86, "Print",ExpressionUUID->"e6e58f11-7e32-4c61-b176-1860c3dbb4ef"],
-Cell[76533, 1831, 805, 16, 86, "Print",ExpressionUUID->"15e0d19c-8346-441d-a055-565d408d8949"],
-Cell[77341, 1849, 805, 16, 86, "Print",ExpressionUUID->"9596c754-245e-4ef3-9287-6dc3ca480af8"],
-Cell[78149, 1867, 805, 16, 86, "Print",ExpressionUUID->"d5f433f4-9f98-40c1-ab3f-17dbc280fa9e"],
-Cell[78957, 1885, 807, 16, 86, "Print",ExpressionUUID->"60d08078-e62d-4eaf-adf8-080025acb05c"],
-Cell[79767, 1903, 807, 16, 86, "Print",ExpressionUUID->"f919483e-488b-4add-80cf-20d19d2dd446"],
-Cell[80577, 1921, 807, 16, 86, "Print",ExpressionUUID->"90960b0a-9b8e-499d-a597-396517fccf03"],
-Cell[81387, 1939, 807, 16, 86, "Print",ExpressionUUID->"78d768d6-26e3-49d0-bb48-cdf60c48d067"],
-Cell[82197, 1957, 808, 16, 107, "Print",ExpressionUUID->"2bc51fb6-7d0c-447b-9052-660456e15620"],
-Cell[83008, 1975, 437, 10, 33, "Print",ExpressionUUID->"64941a87-eed8-4201-a236-3b48e4e68318"],
-Cell[83448, 1987, 439, 10, 33, "Print",ExpressionUUID->"ba8047a1-5c9b-431d-9c1e-ba79c0be8e8b"],
-Cell[83890, 1999, 439, 10, 33, "Print",ExpressionUUID->"84c82923-49ac-4cd3-8f6c-b649df8d4b6a"],
-Cell[84332, 2011, 439, 10, 33, "Print",ExpressionUUID->"365a318f-78ec-483b-a635-395dcf03bd7b"],
-Cell[84774, 2023, 439, 10, 33, "Print",ExpressionUUID->"b4cdc51b-b7c3-418e-965a-9f6de2265070"],
-Cell[85216, 2035, 437, 10, 33, "Print",ExpressionUUID->"400fd92f-65c9-4eb0-8e1f-607a7232d265"],
-Cell[85656, 2047, 439, 10, 33, "Print",ExpressionUUID->"0ec5edc5-6916-407c-89dd-2fb4d8eeffd2"],
-Cell[86098, 2059, 437, 10, 33, "Print",ExpressionUUID->"f2624663-d6a6-4d66-9765-a28e396ca465"],
-Cell[86538, 2071, 437, 10, 33, "Print",ExpressionUUID->"585b2101-1d3b-4601-a4e5-300bd5ae604e"],
-Cell[86978, 2083, 440, 10, 54, "Print",ExpressionUUID->"37118c7c-fd5b-4314-aa2b-de5c8c95f47f"],
-Cell[87421, 2095, 805, 16, 86, "Print",ExpressionUUID->"0397eafe-0bb3-400c-95ec-e8235bdc88dd"],
-Cell[88229, 2113, 805, 16, 86, "Print",ExpressionUUID->"39bb1e41-1915-4800-96fb-be37223e01c2"],
-Cell[89037, 2131, 805, 16, 86, "Print",ExpressionUUID->"56492638-ca09-41f6-bcdd-a281cf13dfda"],
-Cell[89845, 2149, 807, 16, 86, "Print",ExpressionUUID->"32348a7a-ce80-4049-a0a1-cd9555ea3e58"],
-Cell[90655, 2167, 807, 16, 86, "Print",ExpressionUUID->"faf26c0e-0b57-4359-a2a1-cb89ededcaf8"],
-Cell[91465, 2185, 805, 16, 86, "Print",ExpressionUUID->"edd96d57-a62b-40ba-99a9-91f5c7eb9403"],
-Cell[92273, 2203, 807, 16, 86, "Print",ExpressionUUID->"e0302b27-2c8a-49c6-94e7-e8ee54e471d5"],
-Cell[93083, 2221, 805, 16, 86, "Print",ExpressionUUID->"a9c60d80-97b4-4705-944e-635fdb4631ed"],
-Cell[93891, 2239, 807, 16, 86, "Print",ExpressionUUID->"0398e4a0-7f55-4347-97f3-25b364cf3e0e"],
-Cell[94701, 2257, 808, 16, 107, "Print",ExpressionUUID->"f0c12a30-20a9-4857-bca9-e67fab82ab5a"],
-Cell[95512, 2275, 807, 16, 86, "Print",ExpressionUUID->"ba017996-7e81-4fd3-a522-ff485374f482"],
-Cell[96322, 2293, 807, 16, 86, "Print",ExpressionUUID->"6eb80809-7821-42e4-b7f4-0481922f1c6b"],
-Cell[97132, 2311, 804, 16, 86, "Print",ExpressionUUID->"af03b646-7be0-4840-9a20-a6b88c49a8fa"],
-Cell[97939, 2329, 807, 16, 86, "Print",ExpressionUUID->"0bde5548-9f09-4146-9b88-82834c7864f0"],
-Cell[98749, 2347, 805, 16, 86, "Print",ExpressionUUID->"61f4445c-f140-436c-87fb-7ecaeb2e646f"],
-Cell[99557, 2365, 805, 16, 86, "Print",ExpressionUUID->"d3107dc2-dbc2-4d17-b055-695c54131fb3"],
-Cell[100365, 2383, 805, 16, 86, "Print",ExpressionUUID->"4566de25-df56-4144-859f-2a0b5563540f"],
-Cell[101173, 2401, 805, 16, 86, "Print",ExpressionUUID->"60b004d3-d23a-45ab-85ee-90ab6622d876"],
-Cell[101981, 2419, 805, 16, 86, "Print",ExpressionUUID->"5b000ec6-2f86-4bc2-9611-8530f48573ad"],
-Cell[102789, 2437, 808, 16, 107, "Print",ExpressionUUID->"d2ea69b8-8145-4805-8937-ae403e26408c"],
-Cell[103600, 2455, 807, 16, 86, "Print",ExpressionUUID->"ef1770fc-44ca-4224-b54d-1e8f9105cd02"],
-Cell[104410, 2473, 439, 10, 33, "Print",ExpressionUUID->"cc6b3cda-8770-4fe4-8b43-ef5b6ebd3c69"]
+Cell[60371, 1464, 1457, 41, 128, "Input",ExpressionUUID->"86a80f31-93f8-45d1-b609-8dfd742ce8f2"],
+Cell[61831, 1507, 8709, 157, 734, "Output",ExpressionUUID->"28258f8a-53ae-43d0-9701-453426b3b139"]
 }, Open  ]],
-Cell[104864, 2486, 182, 3, 48, "Output",ExpressionUUID->"cd547e9e-1518-49fa-b13e-61669c489a27"]
+Cell[CellGroupData[{
+Cell[70577, 1669, 2867, 74, 186, "Input",ExpressionUUID->"86ccfe9a-aba6-440f-8ea5-5b8ec3a0144f"],
+Cell[73447, 1745, 6631, 131, 372, "Output",ExpressionUUID->"9ec9e5af-9646-414e-8802-f6d1e9eb98e4"]
 }, Open  ]],
-Cell[105061, 2492, 154, 3, 42, "Input",ExpressionUUID->"ec2cebf8-0343-474c-af1d-4c804154784c"],
-Cell[105218, 2497, 281, 6, 69, "Input",ExpressionUUID->"86a80f31-93f8-45d1-b609-8dfd742ce8f2"]
+Cell[CellGroupData[{
+Cell[80115, 1881, 177, 2, 42, "Input",ExpressionUUID->"669dd0cf-3ad1-4a96-9f2e-5aa8bb516df1"],
+Cell[80295, 1885, 194, 2, 48, "Output",ExpressionUUID->"710dff65-f78b-46fc-bb3f-9a65b9a58516"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
