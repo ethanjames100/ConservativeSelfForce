@@ -81,21 +81,48 @@ Where $u^\mu$ is a tangent vector to the particle's worldline and $F_{\mu\nu}$ i
 \begin{equation}
     F_{\mu \nu}=2\left[\phi_2 l_{[\mu} m_{\nu]}+\phi_0 \bar{m}_{[\mu} n_{\nu]}+\phi_1\left(n_{[\mu} l_{\nu]}+m_{[\mu} \bar{m}_{\nu]}\right)\right]+\text { c.c. }
 \end{equation}
+where $\{l^\mu,n^\mu, m^\mu, \bar{m}^\mu\}$ form the Newmann-Pensrose (NP) null-tetrad, and c.c. refers to all complex conjugates of preceding terms. In the case of electromagnetic self force $\phi_0$ and $\phi_2$ have been determined for particles on eccentric orbits in the Kerr spacetime outside the libration region\footnote{The libration is the region $r_\text{min} < r < r_\text{max}$ where $r_\text{min}$ and $r_\text{max}$ are the periapsis and the apoapsis of orbit respectively.} \cite{german2023adiabatic}, given as:
+\beq
+\phi_0 = \Delta^{-1} \sum_{\ell m n} S_{+1}^{\ell m \gamma}(\theta) e^{- i \omega_{mn} t + i m \phi}  
+\begin{cases}
+ \alpha_{+1}^{\infty} P_{+1}^{\infty , \ell m \omega_{mn}}(r) , & r \ge \rmax , \\
+ \alpha_{+1}^{h} P_{+1}^{h , \ell m \omega_{mn}}(r) , & r \le \rmin , 
+\end{cases}
+\eeq
+\beq
+2 (r-i a \cos \theta)^2 \phi_2 = \Delta^{-1} \sum_{\ell m n} S_{-1}^{\ell m \gamma}(\theta) e^{- i \omega_{mn} t + i m \phi}  
+\begin{cases}
+ \alpha_{-1}^{\infty} P_{-1}^{\infty , \ell m \omega_{mn}}(r) , & r \ge \rmax , \\
+ \alpha_{-1}^{h} P_{-1}^{h , \ell m \omega_{mn}}(r) , & r \le \rmin . 
+\end{cases}
+\eeq
+where $\alpha^{\infty}_{\pm1}$ are defined in \cite{german2023adiabatic}, $S^{lm\gamma}_{-1}$ are spin weighted spheroidal harmonics and $P$'s are re scaled solutions to Teukolsy's equations.  In principle $\phi_1$ can also be found outside the libration region given we know $\phi_0$ and $\phi_2$. So what remains is to determine $\phi_0$ and $\phi_2$ inside the libration region. To do this we shall apply the \textbf{method of extended homogeneous solutions}.
 
-where $\{l^\mu,n^\mu, m^\mu, \bar{m}^\mu\}$ form the Newmann-Pensrose (NP) null-tetrad, and c.c. refers to all complex conjugates of preceding terms. In the case of electromagnetic self force $\phi_0$ and $\phi_2$ have been determined for particles on eccentric orbits in the Kerr spacetime \cite{german2023adiabatic}. It remains to determine $\phi_1$.
-
-To determine $\phi_1$ we can use one of the four Maxwell equations \cite{Teukolsky:1973ha}:
+\section{The Method of Extended Homogeneous Solutions}
+\subsection{Review of the application to the Scalar Case \cite{Warburton_2011}}
+\subsubsection{A quick Review of the Scalar Case}
+Consider a scalar charged particle with charge $q$ orbiting in a Kerr Spacetime in an eccentric orbit. The scalar field is obtained by solving the Klien-Gordon equation:
 \begin{equation}
-\begin{aligned}
-(D-2 \rho) \phi_1-\left(\delta^*+\pi-2 \alpha\right) \phi_0 & =2 \pi J_l, \\
-(\delta-2 \tau) \phi_1-(\Delta+\mu-2 \gamma) \phi_0 & =2 \pi J_m, 
-\end{aligned}
+    \nabla^\mu \nabla_\mu \Phi = - 4\pi T
 \end{equation}
-We need only solve one of these to determine $\phi_1$, the other can be used as a consistency check. 
-We take the same source term as \cite{german2023adiabatic}: 
+where $\Phi$ is the scalar-field and $T$ is the source given by:
 \begin{equation}
-J^\mu=q \int u^\mu \delta^4\left(x-x_0(\tau)\right) d \tau
-\end{equation} 
+    T = q \int \delta^4(x^\mu - x_0^\mu) \sqrt{-g} \dd \tau
+\end{equation}
+This a point charge on the particle's worldline $x_0^\mu$. In the Kerr geometry one can separate the scalar equation to spheroidal harmonics and frequency modes:
+\begin{equation}
+    \Phi = \int \sum\limits_{l=0}^\infty \sum \limits_{-l}^{l} R^{lm\omega} S^{lm\gamma} e^{im\phi} e^{-imt} \dd \omega
+\end{equation}
+with $\gamma = a \omega$. This anstaz separates the equation of motion of the field into two equations, one defining the spin-weighted spheroidal harmonics $S^{lm\gamma}$ and one defining the Radial function:
+\begin{equation}
+    \mathcal{T} R_{lmn} = -4\pi \Delta T_{lmn}(r)
+\end{equation}
+where $\mathcal{T}$ is the Teukolsky radial equation operator for $s=0$ and $T_{lmn}$ is the inverse Fourier transform of the source $T$, and $R_{lmn} = R_{lm \omega_{mn}}$ with $\omega_{mn} = m \Omega_\phi + n \Omega_r$. Note that $T_{lmn}$ is zero outside of the libration region and only has contributions inside the libration region. If we re-scale the radial function to be $\psi_{lmn} (r) = r R_{lmn}(r)$ and introduce the tortise coordinate $r_*$ by defining $\dv{r_*}{r} = \frac{r^2}{\Delta}$, then the differential equation takes the nice form:
+ \begin{equation}
+     \dv[2]{\psi_{lmn}}{r_*}  + V_{lmn} (r)\psi_{lmn} = -\frac{4\pi \Delta}{r^3} T_{lmn}(r) =: Z_{lmn}(r)
+ \end{equation}
+ where $V_lmn(r)$ is a vector potential given by equation (25) in \cite{Warburton_2011}. 
+
 \bibliographystyle{apsrev4-1}
 \bibliography{conservativeSelfForce}
 \end{document}
