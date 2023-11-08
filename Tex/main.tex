@@ -124,9 +124,36 @@ with $\gamma = a \omega$. This anstaz separates the equation of motion of the fi
 \end{equation}
 where $\mathcal{T}$ is the Teukolsky radial equation operator for $s=0$ and $T_{lmn}$ is the inverse Fourier transform of the source $T$, and $R_{lmn} = R_{lm \omega_{mn}}$ with $\omega_{mn} = m \Omega_\phi + n \Omega_r$. Note that $T_{lmn}$ is zero outside of the libration region and only has contributions inside the libration region. If we re-scale the radial function to be $\psi_{lmn} (r) = r R_{lmn}(r)$ and introduce the tortise coordinate $r_*$ by defining $\dv{r_*}{r} = \frac{r^2}{\Delta}$, then the differential equation takes the nice form:
  \begin{equation}
-     \dv[2]{\psi_{lmn}}{r_*}  + V_{lmn} (r)\psi_{lmn} = -\frac{4\pi \Delta}{r^3} T_{lmn}(r) =: Z_{lmn}(r)
+     \dv[2]{\psi_{lmn}}{r_*}  + V_{lmn} (r)\psi_{lmn} = -\frac{4\pi \Delta}{r^3} T_{lmn}(r) =: Z_{lmn}(r) \label{eqn:radialEquation}
  \end{equation}
- where $V_{lmn}(r)$ is a vector potential given by equation (25) in \cite{Warburton_2011}. 
+ where $V_{lmn}(r)$ is a vector potential given by equation (25) in \cite{Warburton_2011}. By applying the method of variation of parameters one can define a solution outside the libration region:
+ \begin{equation}
+     \psi_{lmn} (r) =  \left\{ \begin{aligned}
+         C^-_{lmn} \psi^-_{lmn} =: \tilde{\psi}^-_{lmn} && r\leq r_\text{min}\\
+         C^+_{lmn} \psi^+_{lmn} =: \tilde{\psi}^+_{lmn} && r\geq r_\text{max}\\
+     \end{aligned}\right.
+ \end{equation}
+ where $\psi^\pm_{lmn}$ are the two homogeneous solutions to Eq.~\eqref{eqn:radialEquation}, and $C^\pm$ are the solution coefficients\footnote{These are analogous to $\alpha^\infty_{\pm1}$ and $\alpha^h_{\pm1}$ in the electric case.} defined in Eq.~(44) in \cite{Warburton_2011}.
+\subsubsection{Spheroidal Projections}
+In order to regularise using the standard mode-sum approach, we require that the modes are \textbf{spherical harmonic} modes as opposed to \textbf{spin-weighted spheroidal harmonic} modes. To deal with this we project the spin-weighted spheroidal harmonics $S_{\hat{l}m\gamma}(\theta)e^{im\varphi}$ onto spherical harmonics $Y_{lm}(\theta, \varphi)$ in the standard change-of-basis procedure:
+\begin{equation}
+    S_{\hat{l}m\gamma}(\theta) e^{im\varphi} = \sum\limits_{l=0}^\infty b^{\hat{l}}_{lm}(\gamma) Y_{lm}(\theta,\varphi)
+\end{equation}
+where $b^{\hat{l}}_{lm}$ are the $\gamma$-dependant coefficients of projection, which can be found in literature. Once projected onto these spherical harmonics we write $\Phi$ as a mode-sum of spherical harmonics:
+\begin{equation}
+    \Phi = \sum\limits_{l=0}^\infty \sum\limits_{m=-l}^l \phi_{lm}(t,r) Y_{lm}(\theta,\phi)/r
+\end{equation}
+where:
+\begin{equation}
+    \phi_{lm} = \sum\limits_{n=-\infty}^\infty \phi_{lmn}(t,r) 
+\end{equation}
+and:
+\begin{equation}
+    \phi_{lmn}(t,r) = \sum_{\hat{l} =0}^\infty b^{\hat{l}}_{lm} \psi^\text{inh}_{\hat{l}mn} e^{-i\omega t}
+\end{equation}
+where $\psi^\text{inh}$ is the full inhomogeneous solution to Eq.~\eqref{eqn:radialEquation}. So in theory at this stage, since we have not yet applied the method of extended homogeneous solutions we have the full solution for $\Phi$ outside the libration region. 
+ \subsubsection{Applying the method of Extended Homogeneous Solutions}
+ 
 
 \bibliographystyle{apsrev4-1}
 \bibliography{conservativeSelfForce}
