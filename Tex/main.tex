@@ -80,11 +80,11 @@ University of Sheffield, Hicks Building, Hounsfield Road, Sheffield S3 7RH, Unit
 \section{The Conservative Self-Force}
 The conservative self-force is the radial component of the self force, defined \cite{TorresDolan2022}:
 \begin{equation}
-    \mathcal{F}_r = q F_{r\mu} u^\mu
+    \mathcal{F}_r = q F_{r\mu} u^\mu \label{eqn:ConservativeSelfForceDef}
 \end{equation}
 Where $u^\mu$ is a tangent vector to the particle's worldline and $F_{\mu\nu}$ is the Maxwell tensor, reconstructed from the Maxwell scalars by:
 \begin{equation}
-    F_{\mu \nu}=2\left[\phi_2 l_{[\mu} m_{\nu]}+\phi_0 \bar{m}_{[\mu} n_{\nu]}+\phi_1\left(n_{[\mu} l_{\nu]}+m_{[\mu} \bar{m}_{\nu]}\right)\right]+\text { c.c. }
+    F_{\mu \nu}=2\left[\phi_2 l_{[\mu} m_{\nu]}+\phi_0 \bar{m}_{[\mu} n_{\nu]}+\phi_1\left(n_{[\mu} l_{\nu]}+m_{[\mu} \bar{m}_{\nu]}\right)\right]+\text { c.c. } \label{eqn:maxwelltensorRecon}
 \end{equation}
 where $\{l^\mu,n^\mu, m^\mu, \bar{m}^\mu\}$ form the Newmann-Pensrose (NP) null-tetrad, and c.c. refers to all complex conjugates of preceding terms. In the case of electromagnetic self force $\phi_0$ and $\phi_2$ have been determined for particles on eccentric orbits in the Kerr spacetime outside the libration region\footnote{The libration is the region $r_\text{min} < r < r_\text{max}$ where $r_\text{min}$ and $r_\text{max}$ are the periapsis and the apoapsis of orbit respectively.} \cite{german2023adiabatic}, given as:
 \beq
@@ -188,6 +188,32 @@ The argument carries forward identically. We extend the domains of the homogeneo
 \end{cases}
 \eeq
 
+\section{An expression for the conservative self force}
+Recall that the conservative self force is given by Eq. \eqref{eqn:ConservativeSelfForceDef}, where $q$ is the electric charge, $F_{\mu\nu}$ is the maxwell tensor and $u^\mu$ is the tangent 4-velocity. Since we are only considering orbits in the equatorial plane, the tangent 4-velocity is given by $u^\mu = (\dot{t}, \dot{r}, 0 , \dot{\phi})$. Thus if one expands the contraction of the 4-vellocity with the radial part of the  maxwell tensor one gets the following expression for the conservative self force:
+\begin{equation}
+    \mathcal{F}_r = q (F_{rt} \dot{t} + F_{rr} \dot{r} + F_{r\phi} \dot{\phi})
+\end{equation}
+The second term is zero since the Maxwell tensor is anti-symmetric, giving:
+\begin{equation}
+    \mathcal{F}_r = q (F_{rt} \dot{t} + F_{r\phi} \dot{\phi})
+\end{equation}
+Now, we can reconstruct the Maxwell Tensor from the Maxwell scalars by using Eq.~ \eqref{eqn:maxwelltensorRecon}. This requires evaluating the anti-symmetric symmatrisations of the products of the NP basis vectors. Below are the required results:
+\begin{align}
+    n_{[r}l_{t]} = \frac{1}{2}&&m_{[r}\bar{m}_{t]} = 0\\
+    l_{[r}m_{t]} = -\frac{a \sin (\theta ) (a \cos (\theta )+i r)}{2 \sqrt{2}\Delta} && \bar{m}_{[r}n_{t]} = -\frac{a \sin (\theta )}{\sqrt{2} (4 a \cos (\theta )+4 i r)}\\
+    n_{[r}l_{\phi ]} = -\frac{1}{2} a \sin ^2(\theta ) && m_{[r} \bar{m}_{\phi]} = 0 \\
+    l_{[r}m_{\phi]}= \frac{\left(a^2+r^2\right) \sin (\theta ) (a \cos (\theta )+i r)}{2 \sqrt{2} \Delta} && \bar{m}_{[r}n_{\phi ]} = \frac{\left(a^2+r^2\right) \sin (\theta )}{4 \sqrt{2} (a \cos (\theta )+i r)}
+\end{align}
+So the two required components of the maxwell tensor are:
+\begin{align}
+    F_{rt} &=Re \left\{ 2 \left( \frac{1}{2}\phi_1 - \phi_2  \frac{a \sin (\theta ) (a \cos (\theta )+i r)}{2 \sqrt{2}\Delta} - \phi_0 \frac{a \sin (\theta )}{\sqrt{2} (4 a \cos (\theta )+4 i r)}\right)\right \}\\
+    F_{r\phi} &= Re\left\{2 \left( - \frac{a \sin^2\theta}{2} \phi_1 +\frac{\left(a^2+r^2\right) \sin (\theta ) (a \cos (\theta )+i r)}{2 \sqrt{2} \Delta} \phi_2  +  \frac{\left(a^2+r^2\right) \sin (\theta )}{4 \sqrt{2} (a \cos (\theta )+i r)} \phi_0\right)\right\}
+\end{align}
+Given that we are only considering trajectories in the plane, we can set $\theta = \pi/2$ reducing these equations:
+\begin{align}
+    F_{rt} &=Re \left\{ 2 \left( \frac{1}{2}\phi_1 - \phi_2  \frac{i a r}{2 \sqrt{2} \Delta} + \phi_0\frac{i a}{4 \sqrt{2} r}\right)\right \}\\
+    F_{r\phi} &= Re\left\{2 \left(-\frac{a}{2} \phi_1 +\frac{i r \left(a^2+r^2\right)}{2 \sqrt{2} \left(a^2+r (r-2 M)\right)} \phi_2 -\frac{i \left(a^2+r^2\right)}{4 \sqrt{2} r}\phi_0\right)\right\}
+\end{align}
 \bibliographystyle{apsrev4-1}
 \bibliography{conservativeSelfForce}
 \end{document}
