@@ -153,7 +153,40 @@ and:
 \end{equation}
 where $\psi^\text{inh}$ is the full inhomogeneous solution to Eq.~\eqref{eqn:radialEquation}. So in theory at this stage, since we have not yet applied the method of extended homogeneous solutions we have the full solution for $\Phi$ outside the libration region. 
  \subsubsection{Applying the method of Extended Homogeneous Solutions}
- 
+
+The method of extended homogeneous solutions starts by extending the domain of the homogeneous solutions to the entire domain $r>2M$ by defining:
+\begin{equation}
+    \begin{aligned}
+    \tilde{\psi}^\pm_{lmn} (r)  := C^\pm_{lmn} \psi(r)^\pm_{lmn},  && r>2M.
+    \end{aligned}
+\end{equation}
+This is known as the \textit{Domain-extended homogeneous solution} and is analytic over its entire domain. The inhomogeneous solution is assumed to be an analytic function everywhere in the region $r>2M$ except at the position of the particle $r=r_0(\tau)$. In the region $r>r_\text{max}$ the full inhomogeneous solution is known and is identical to the domain-extended homogeneous solution $\tilde{\psi}^+$ by its definition. Thus since we have two analytical functions that are identical on $r>r_\text{max}$ then they are identical for $r>r_0(\tau)$. Note that its not on the full domain $r>2M$ since the inhomogeneous solution is not analytic along the particle's worldline creating two disconnected regions where the inhomogeneous solution is separately analytic. Similarly one can argue that the inhomogeneous solution is $\tilde{\psi}^-$ in the region $2M<r<r_0(\tau)$. So the full inhomogeneous solution is:
+
+\begin{equation}
+    \psi^\text{inh}_{lmn} = \left\{ 
+    \begin{aligned}
+         C^-_{lmn} \psi^-_{lmn} =: \tilde{\psi}^-_{lmn} && r\leq r_0(\tau)\\
+         C^+_{lmn} \psi^+_{lmn} =: \tilde{\psi}^+_{lmn} && r\geq r_0(\tau)
+    \end{aligned}
+    \right.
+\end{equation}
+
+\subsection{Applying the method to the electric case}
+The argument carries forward identically. We extend the domains of the homogeneous giving the maxwell scalars:
+\beq
+\phi_0 = \Delta^{-1} \sum_{\ell m n} S_{+1}^{\ell m \gamma}(\theta) e^{- i \omega_{mn} t + i m \phi}  
+\begin{cases}
+ \alpha_{+1}^{\infty} P_{+1}^{\infty , \ell m \omega_{mn}}(r) , & r \ge r_0(\tau) , \\
+ \alpha_{+1}^{h} P_{+1}^{h , \ell m \omega_{mn}}(r) , & r \le r_0(\tau) , 
+\end{cases}
+\eeq
+\beq
+2 (r-i a \cos \theta)^2 \phi_2 = \Delta^{-1} \sum_{\ell m n} S_{-1}^{\ell m \gamma}(\theta) e^{- i \omega_{mn} t + i m \phi}  
+\begin{cases}
+ \alpha_{-1}^{\infty} P_{-1}^{\infty , \ell m \omega_{mn}}(r) , & r \ge r_0(\tau) , \\
+ \alpha_{-1}^{h} P_{-1}^{h , \ell m \omega_{mn}}(r) , & r \le r_0(\tau). 
+\end{cases}
+\eeq
 
 \bibliographystyle{apsrev4-1}
 \bibliography{conservativeSelfForce}
