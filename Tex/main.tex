@@ -211,9 +211,38 @@ So the two required components of the maxwell tensor are:
 \end{align}
 Given that we are only considering trajectories in the plane, we can set $\theta = \pi/2$ reducing these equations:
 \begin{align}
-    F_{rt} &=Re \left\{ 2 \left( \frac{1}{2}\phi_1 - \phi_2  \frac{i a r}{2 \sqrt{2} \Delta} + \phi_0\frac{i a}{4 \sqrt{2} r}\right)\right \}\\
-    F_{r\phi} &= Re\left\{2 \left(-\frac{a}{2} \phi_1 +\frac{i r \left(a^2+r^2\right)}{2 \sqrt{2} \left(a^2+r (r-2 M)\right)} \phi_2 -\frac{i \left(a^2+r^2\right)}{4 \sqrt{2} r}\phi_0\right)\right\}
+    F_{rt} &=\Re \left\{ 2 \left( \frac{1}{2}\phi_1 - \phi_2  \frac{i a r}{2 \sqrt{2} \Delta} + \phi_0\frac{i a}{4 \sqrt{2} r}\right)\right \}\\
+    F_{r\phi} &= \Re\left\{2 \left(-\frac{a}{2} \phi_1 +\frac{i r \left(a^2+r^2\right)}{2 \sqrt{2} \Delta} \phi_2 -\frac{i \left(a^2+r^2\right)}{4 \sqrt{2} r}\phi_0\right)\right\}
 \end{align}
+Combining this we get the following expression for the conservative part of the self force:
+\begin{equation}
+    \mathcal{F}_r = 2 q \Re \left\{
+    \frac{1}{2} \phi_1 (\dot{t} - a \dot{\phi}) - \frac{ir}{2\sqrt{2}\Delta }\phi_2 ((a^2 +r^2) \dot{\phi} -a\dot{t})+ \frac{i}{4\sqrt{2}r} \phi_0(a \dot{t} - (a^2 +r^2) \dot{\phi})
+    \right\} 
+\end{equation}
+\emph{(I think there's a factor of 2 missing since $A + \bar{A} = 2 \Re\{A\}$ and not just $\Re\{A\}$)}
+\section{Projecting onto the spin-weighted spherical basis}
+Spin-weighted spheroidal harmonics can be projected onto a basis of spherical harmonics of the same spin-weight:
+\begin{equation}
+    S_{slm}(\theta) = \sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} Y_{sjm} (\theta) \label{eqn:projectionOntoSphericalBasis}
+\end{equation}
+where $l_\text{min} = \max\{|m| ,|s|\}$, $S$ are the spin weighted \textbf{spehroidal} harmonics, and $Y$  are the spin weighted \textbf{spherical} harmonics. To calculate the expansion coefficients one notes that the spin weighted spherical harmonics form a basis in the space of angular functions and, in particular:
+\begin{equation}
+    \oint_{\mathbb{S}^2} Y_{slm}  \bar{Y}_{s l'  m'} \ \dd \Omega = \delta_{l l'} \delta_{m m'}
+\end{equation}
+We can nicley make use of dirac notation. Define our basis kets as $\ket{slm} = Y_{slm}$. The inner product (or braket) is then:
+\begin{equation}
+    \mel{slm}{f(\theta,\phi)}{s'l'm'}= \oint_{\mathbb{S}^2} Y_{slm} f(\theta,\phi)  \bar{Y}_{s' l'  m'}\  \dd \Omega
+\end{equation}
+We multiply both sides of eq.~\eqref{eqn:projectionOntoSphericalBasis} by $\bra{sl'm}$, giving:
+\begin{align}
+    \bra{sl'm} S_{slm}(\theta) &= \bra{slm'}\sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} \ket{slm} \\
+    \implies \bra{sl'm}\sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} \ket{slm} &=\sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} \braket{sl'm}{slm}\\
+    \implies \oint_{\mathbb{S}^2}  \sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} Y_{slm} \bar{Y}_{s l'm} \ \dd \Omega &= \sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} \delta_{ll'}\\
+    \therefore b_{ll'}^{(s)} &= \oint_{\mathbb{S}^2} S_{slm} \bar{Y}_{sl'm} \ \dd \Omega 
+\end{align}
+\subsection{Projecting Spin-$s$ spherical harmonics onto spin-0 spherical harmonics}
+
 \bibliographystyle{apsrev4-1}
 \bibliography{conservativeSelfForce}
 \end{document}
