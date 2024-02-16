@@ -188,7 +188,7 @@ The argument carries forward identically. We extend the domains of the homogeneo
 \end{cases}
 \eeq
 
-\section{An expression for the conservative self force}
+\section{An expression for the radial component of the self force}
 Recall that the conservative self force is given by Eq. \eqref{eqn:ConservativeSelfForceDef}, where $q$ is the electric charge, $F_{\mu\nu}$ is the maxwell tensor and $u^\mu$ is the tangent 4-velocity. Since we are only considering orbits in the equatorial plane, the tangent 4-velocity is given by $u^\mu = (\dot{t}, \dot{r}, 0 , \dot{\phi})$. Thus if one expands the contraction of the 4-vellocity with the radial part of the  maxwell tensor one gets the following expression for the conservative self force:
 \begin{equation}
     \mathcal{F}_r = q (F_{rt} \dot{t} + F_{rr} \dot{r} + F_{r\phi} \dot{\phi})
@@ -206,22 +206,79 @@ Now, we can reconstruct the Maxwell Tensor from the Maxwell scalars by using Eq.
 \end{align}
 So the two required components of the maxwell tensor are:
 \begin{align}
-    F_{rt} &=Re \left\{ 2 \left( \frac{1}{2}\phi_1 - \phi_2  \frac{a \sin (\theta ) (a \cos (\theta )+i r)}{2 \sqrt{2}\Delta} - \phi_0 \frac{a \sin (\theta )}{\sqrt{2} (4 a \cos (\theta )+4 i r)}\right)\right \}\\
-    F_{r\phi} &= Re\left\{2 \left( - \frac{a \sin^2\theta}{2} \phi_1 +\frac{\left(a^2+r^2\right) \sin (\theta ) (a \cos (\theta )+i r)}{2 \sqrt{2} \Delta} \phi_2  +  \frac{\left(a^2+r^2\right) \sin (\theta )}{4 \sqrt{2} (a \cos (\theta )+i r)} \phi_0\right)\right\}
+    F_{rt} &=2Re \left\{ 2 \left( \frac{1}{2}\phi_1 - \phi_2  \frac{a \sin (\theta ) (a \cos (\theta )+i r)}{2 \sqrt{2}\Delta} - \phi_0 \frac{a \sin (\theta )}{\sqrt{2} (4 a \cos (\theta )+4 i r)}\right)\right \} \label{eqn:Frt1}\\
+    F_{r\phi} &=2 Re\left\{2 \left( - \frac{a \sin^2\theta}{2} \phi_1 +\frac{\left(a^2+r^2\right) \sin (\theta ) (a \cos (\theta )+i r)}{2 \sqrt{2} \Delta} \phi_2  +  \frac{\left(a^2+r^2\right) \sin (\theta )}{4 \sqrt{2} (a \cos (\theta )+i r)} \phi_0\right)\right\}\label{eqn:Frphi1}
 \end{align}
-Given that we are only considering trajectories in the plane, we can set $\theta = \pi/2$ reducing these equations:
+Now, $\Delta \phi_0$ and $(r-i\cos\theta)^2 \phi_2$ can be written in the form $S_{\pm1} P_{\pm1} \alpha_{\pm 1} \chi$ where $\chi = \exp{-i\omega  t + i m\phi}$. Plugging these into Eq.~\eqref{eqn:Frt1} and Eq.~\eqref{eqn:Frphi1} gives:
 \begin{align}
-    F_{rt} &=\Re \left\{ 2 \left( \frac{1}{2}\phi_1 - \phi_2  \frac{i a r}{2 \sqrt{2} \Delta} + \phi_0\frac{i a}{4 \sqrt{2} r}\right)\right \}\\
-    F_{r\phi} &= \Re\left\{2 \left(-\frac{a}{2} \phi_1 +\frac{i r \left(a^2+r^2\right)}{2 \sqrt{2} \Delta} \phi_2 -\frac{i \left(a^2+r^2\right)}{4 \sqrt{2} r}\phi_0\right)\right\}
+    F_{rt} &= 4 \Re\left\{\frac{1}{2} \phi_1 - \frac{i a \sin\theta}{4 \sqrt{2} \Delta(r-ia\cos\theta)} \left(\sum\limits_{lmn} \left[S^{lmn}_{-1} P^{lmn}_{-1} \alpha^{lmn}_{-1} - S^{lmn}_{+1} P^{lmn}_{+1} \alpha^{lmn}_{+1}\right]\chi^{lmn}\right)\right\}\\
+    F_{r\phi} &= 4 \Re \left\{-\frac{a \sin^2\theta}{2} \phi_1 + \frac{(a^2+r^2) i \sin\theta}{4\sqrt{2} \Delta (r-ia\cos\theta)} \left(\sum\limits_{lmn} \left[S^{lmn}_{-1} P^{lmn}_{-1} \alpha^{lmn}_{-1} - S^{lmn}_{+1} P^{lmn}_{+1} \alpha^{lmn}_{+1}\right]\chi^{lmn}\right) \right\}
 \end{align}
-Combining this we get the following expression for the conservative part of the self force:
+So the radial component of the self force is:
+
+\begin{align}
+    \mathcal{F}_r =& q\Re\Bigg\{2\phi_1 (\dot{t}- a\dot{\phi} \sin^2\theta) \nonumber\\
+    &+ \left(a \dot{t} + (a^2 +r^2)\dot{\phi} \right)\frac{i\sqrt{2} \sin\theta}{2 \Delta (r-ia \cos \theta) } \left(\sum\limits_{lmn} \left[S^{lmn}_{-1} P^{lmn}_{-1} \alpha^{lmn}_{-1} - S^{lmn}_{+1} P^{lmn}_{+1} \alpha^{lmn}_{+1}\right]\chi^{lmn}\right) \Bigg\}
+\end{align}
+\subsection{Projecting onto scalar harmonics}
+Using the results of Appendix.~ \ref{appendix:Projection} we project the radial component of the self - force onto a basis of scalar harmonics.
+\begin{align}
+     \mathcal{F}_r =& q\Re\Bigg\{2\phi_1 (\dot{t}- a\dot{\phi} \sin^2\theta) \nonumber\\
+    &+ \left(a \dot{t} + (a^2 +r^2)\dot{\phi} \right)\frac{i\sqrt{2} }{2\Delta (r-ia \cos \theta) } \left(\sum\limits_{lmnjk} \left[\mathcal{C}^{ljk}_{-1} P^{lmn}_{-1} \alpha^{lmn}_{-1} - \mathcal{C}^{ljk}_{+1} P^{lmn}_{+1} \alpha^{lmn}_{+1}\right]Y_{0km}\chi^{lmn}\right) \Bigg\}
+\end{align}
+Where:
 \begin{equation}
-    \mathcal{F}_r = 2 q \Re \left\{
-    \frac{1}{2} \phi_1 (\dot{t} - a \dot{\phi}) - \frac{ir}{2\sqrt{2}\Delta }\phi_2 ((a^2 +r^2) \dot{\phi} -a\dot{t})+ \frac{i}{4\sqrt{2}r} \phi_0(a \dot{t} - (a^2 +r^2) \dot{\phi})
-    \right\} 
+    \mathcal{C}_s^{ljk} = b_{lj}^{(s)} \mathfrak{s}_{jk}^{(s)}
 \end{equation}
-\emph{(I think there's a factor of 2 missing since $A + \bar{A} = 2 \Re\{A\}$ and not just $\Re\{A\}$)}
+
+We should also expand out the $\phi_1$ term. $\phi_1$ is given by a sum over $lmn$ modes defined by:
+\begin{equation}
+    \phi_1^{lmn} = \frac{\chi^{lmn}(g_{+1} \mathcal{L}_1 S_{+1}(\theta) - ia f_{-1}(\theta) \mathcal{D}P_{+1}(r)}{\sqrt{2} (r-ia\cos\theta)^2}
+\end{equation}
+where:
+\begin{align}
+    \mathcal{B} g_{+1} &= (r\mathcal{D}-1)P_{-1},\\
+    \mathcal{B} f_{-1} &= (\cos \theta \mathcal{L}_1 + \sin\theta) S_{+1},\\
+    \mathcal{B} &= \sqrt{\lambda^2 + 4 am \omega - 4 a^2 \omega^2},\\
+    \mathcal{L}_n &= \mathcal{L} + n \cot\theta,\\
+    \mathcal{D} &= l^\mu_+ \partial_\mu = \partial_r - \frac{iK}{\Delta},\\
+    \mathcal{L} &= m^\mu_- \partial_\mu = \partial_\theta + Q,\\
+    K&=\omega(r^2 +a^2) -am\\
+    Q&=m \csc \theta -a \omega \sin \theta,
+\end{align}
+and $\lambda$ is the separation constant for the homogeneous Teukolsky equations for $s=-1$. To project this onto scalar harmonics we use that\cite{TorresDolan2022}:
+\begin{equation}
+    \mathcal{L}_1 S_{+1} = \sum\limits_{jk} C^\mathcal{L}_{lmjk} \ket{0km},
+\end{equation}
+where:
+\begin{equation}
+    C^\mathcal{L}_{lmnjk} = b_{lj}^{(+1)}\left(\sqrt{j(j+1)} \delta_{jk} - a \omega \mathfrak{s}_{jk}\right)
+\end{equation}
+with this it is easy to show that the radial component of the self-force is given by:
+\begin{align}
+    \mathcal{F}_r =& q\Re\sum\limits_{lmnjk}\Bigg\{(\dot{t}- a\dot{\phi} \sin^2\theta) \frac{\sqrt{2} \left(\mathcal{B} g_{+1} C^\mathcal{L}_{lmnjk} - ia \left(C^\mathcal{L}_{lmnjk} \cos\theta - C^{ljk}_{+1}\right)\mathcal{D} P_{-1}\right)}{\mathcal{B} (r-ia\cos\theta)^2} \nonumber\\
+    &+ \left(a \dot{t} + (a^2 +r^2)\dot{\phi} \right)\frac{i\sqrt{2} }{2 \Delta(r-ia \cos \theta) } \left(\mathcal{C}^{ljk}_{-1} P^{lmn}_{-1} \alpha^{lmn}_{-1} - \mathcal{C}^{ljk}_{+1} P^{lmn}_{+1} \alpha^{lmn}_{+1}\right) \Bigg\}Y_{0km}\chi^{lmn}
+\end{align}
+
+Which agrees with Eq.~(72-73) in \cite{TorresDolan2022} in the circular case (where $\dot{\phi} = \Omega \dot{t}$). Next we expand this component in a power series of $z=\cos\theta$ Giving:
+\begin{equation}
+    \mathcal{F}_r = q \sum\limits_{kmn} \left[ {}_0\mathcal{F}_r^{lmn} +\  {}_1f_r^{lmn} z +\  {}_2f_r^{lmn} z^2+ \mathcal{O}(z^3) \right]Y_{0km}
+\end{equation}
+where:
+\begin{align}
+   \nonumber {}_0\mathcal{F}_r^{lmn} &= \sum\limits_{lj} \Bigg\{\frac{\sqrt{2} (\dot{t} - a \dot{\phi})}{r^2} \Re{\mathcal{C}^\mathcal{L}_{lmnjk}g_{+1} + \frac{i a \mathcal{C}_{+1}^{ljk} \mathcal{D} P_{-1}^{lmn}}{\mathcal{B}}} \\&+ \frac{\dot{\phi} (a^2 + r^2) + a \dot{t}}{\sqrt{2}\Delta r} \Im{\mathcal{C}_{-1}^{ljk}P_{-1}^{lmn}\alpha_{-1}^{lmn} - \mathcal{C}_{+1}^{ljk} P_{+1}^{lmn} \alpha_{+1}^{lmn}}\Bigg\}\chi^{lmn},\\
+   \nonumber {}_1f_r^{lmn} &= a  \sum\limits_{lj} \Bigg\{\frac{2 \sqrt{2} (\dot{t} - a \dot{\phi})}{r^3} \Im{\mathcal{C^L}_{lmnjk} g_{+1} - \frac{ai\mathcal{C}_{+1}^{ljk}\mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}}
+   - \frac{\sqrt{2} (\dot{t}-a\dot{\phi})}{r^3} \Im{\frac{\mathcal{C^L}_{lmnjk}\mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}} \\ &+ \frac{\dot{\phi} (a^2 +r^2) + a \dot{t}}{\sqrt{2} \Delta r^2} \Re{C_{+1}^{lmn} P_{+1}^{lmn} \alpha_{+1}^{lmn} - C_{-1}^{lmn} P_{-1}^{lmn} \alpha_{-1}^{lmn}}\Bigg\} \chi^{lmn},\\
+   \nonumber {}_2f_r^{lmn} &= a^2 \sum\limits_{lj}\Bigg \{ \frac{a \dot{t} + \dot{\phi} (a^2 + r^2)}{\sqrt{2} r^3 \Delta} \Im{C_{+1}^{lmn} P_{+1}^{lmn} \alpha_{+1}^{lmn} - C_{-1}^{lmn} P_{-1}^{lmn} \alpha_{-1}^{lmn}}\\ 
+   \nonumber &+ \frac{2 \sqrt{2} (\dot{t} -a \dot{\phi})}{r^2} \Re{\frac{\mathcal{C^L}_{lmnjk} \mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}} - \frac{3 \sqrt{2} (\dot{t} -a \dot{\phi})}{r^4} \Re{\mathcal{C^L}_{lmnjk} g_{+1} + \frac{i a C_{+1}^{ljk}P_{-1}^{lmn}}{\mathcal{B}}} \Bigg\}\chi^{lmn}\\
+   &+ a \sum\limits_{lj} \frac{\sqrt{2} \dot{\phi}}{r^2} \Re{\mathcal{C^L}_{lmnjk} g_{+1} + \frac{i a C_{+1}^{ljk}P_{-1}^{lmn}}{\mathcal{B}}}\chi^{lmn}.
+\end{align}
+\newpage
+\appendix
+
 \section{Projecting onto the spin-weighted spherical basis}
+\label{appendix:Projection}
+\subsection{Projecting spin-s Spheroidal harmonics onto spin-s spherical harmonics}
 Spin-weighted spheroidal harmonics can be projected onto a basis of spherical harmonics of the same spin-weight:
 \begin{equation}
     S_{slm}(\theta) = \sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} Y_{sjm} (\theta) \label{eqn:projectionOntoSphericalBasis}
@@ -230,7 +287,7 @@ where $l_\text{min} = \max\{|m| ,|s|\}$, $S$ are the spin weighted \textbf{spehr
 \begin{equation}
     \oint_{\mathbb{S}^2} Y_{slm}  \bar{Y}_{s l'  m'} \ \dd \Omega = \delta_{l l'} \delta_{m m'}
 \end{equation}
-We can nicley make use of dirac notation. Define our basis kets as $\ket{slm} = Y_{slm}$. The inner product (or braket) is then:
+We can nicely make use of Dirac notation. Define our basis kets as $\ket{slm} = Y_{slm}$. The inner product (or braket) is then:
 \begin{equation}
     \mel{slm}{f(\theta,\phi)}{s'l'm'}= \oint_{\mathbb{S}^2} Y_{slm} f(\theta,\phi)  \bar{Y}_{s' l'  m'}\  \dd \Omega
 \end{equation}
@@ -241,8 +298,22 @@ We multiply both sides of eq.~\eqref{eqn:projectionOntoSphericalBasis} by $\bra{
     \implies \oint_{\mathbb{S}^2}  \sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} Y_{slm} \bar{Y}_{s l'm} \ \dd \Omega &= \sum\limits_{j=l_\text{min}}^{\infty} b_{lj}^{(s)} \delta_{ll'}\\
     \therefore b_{ll'}^{(s)} &= \oint_{\mathbb{S}^2} S_{slm} \bar{Y}_{sl'm} \ \dd \Omega 
 \end{align}
-\subsection{Projecting Spin-$s$ spherical harmonics onto spin-0 spherical harmonics}
-
+\subsection{Projecting Spin-$s$ spheroidal harmonics onto spin-0 spherical harmonics}
+The set of spin-0 spherical harmonics also independently make a basis for functions in the space of angular functions. The easiest way to project this is using the following:
+\begin{equation}
+    \sin^{|s|}(\theta) \ket{s l m} = \sum\limits_{j=l-1}^{l+1} \mathfrak{s}^s_{lj} \ket{0 l m}
+\end{equation}
+where $\mathfrak{s}^s_{ll'}$ are spin-mixing coefficients defined by:
+\begin{equation}
+    \mathfrak{s}^s_{ll'} = \bra{0 l' m} \sin^{|s|}(\theta) \ket{s l} = \oint_{\mathbb{S}^2} \sin^{|s|}(\theta) \bar{Y}_{0l'm} Y_{slm} \ \dd \Omega
+\end{equation}
+These spin-mixing coefficients can be easily evaluated using equation 133a in \cite{dolan2023metric}. So, multiplying the spheroidal harmonics by $\sin^{|s|}(\theta)$ gives:
+\begin{align}
+    \sin^{|s|}(\theta) S_{slm}(\theta) &= \sin^{|s|}(\theta) \sum\limits_{j = l_\text{max}}^\infty b_{lj}\ket{s j m}\\
+    &= \sum\limits_{j = l_\text{max}}^\infty b_{lj} \sin^{|s|}(\theta)\ket{s j m}\\
+    &= \sum\limits_{j = l_\text{max}}^\infty \left\{b_{lj}\sum\limits_{k=j-1}^{j+1} \mathfrak{s}^s_{jk} \ket{0 k m} \right\}\\
+    &=\sum\limits_{j = l_\text{max}}^\infty \sum\limits_{k=j-1}^{j+1}  b_{lj} \mathfrak{s}^{(s)}_{jk} \ket{0km}
+\end{align}
 \bibliographystyle{apsrev4-1}
 \bibliography{conservativeSelfForce}
 \end{document}
