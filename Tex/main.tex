@@ -256,8 +256,8 @@ where:
 \end{equation}
 with this it is easy to show that the radial component of the self-force is given by:
 \begin{align}
-    \mathcal{F}_r =& q\Re\sum\limits_{lmnjk}\Bigg\{(\dot{t}- a\dot{\phi} \sin^2\theta) \frac{\sqrt{2} \left(\mathcal{B} g_{+1} C^\mathcal{L}_{lmnjk} - ia \left(C^\mathcal{L}_{lmnjk} \cos\theta - C^{ljk}_{+1}\right)\mathcal{D} P_{-1}\right)}{\mathcal{B} (r-ia\cos\theta)^2} \nonumber\\
-    &+ \left(a \dot{t} + (a^2 +r^2)\dot{\phi} \right)\frac{i\sqrt{2} }{2 \Delta(r-ia \cos \theta) } \left(\mathcal{C}^{ljk}_{-1} P^{lmn}_{-1} \alpha^{lmn}_{-1} - \mathcal{C}^{ljk}_{+1} P^{lmn}_{+1} \alpha^{lmn}_{+1}\right) \Bigg\}Y_{0km}\chi^{lmn}
+    \mathcal{F}_r =& q\Re\sum\limits_{lmnjk}\Bigg\{(\dot{t}- a\dot{\phi} \sin^2\theta) \frac{\sqrt{2} \left(\mathcal{B} g_{+1} C^\mathcal{L}_{lmnjk} - ia \left(C^\mathcal{L}_{lmnjk} \cos\theta + C^{ljk}_{+1}\right)\mathcal{D} P_{-1}\right)}{\mathcal{B} (r-ia\cos\theta)^2} \nonumber\\
+    &+ \left(-a \dot{t} + (a^2 +r^2)\dot{\phi} \right)\frac{i\sqrt{2} }{2 \Delta(r-ia \cos \theta) } \left(\mathcal{C}^{ljk}_{-1} P^{lmn}_{-1}  - \mathcal{C}^{ljk}_{+1} P^{lmn}_{+1} \right) \Bigg\}Y_{0km}\chi^{lmn}
 \end{align}
 
 Which agrees with Eq.~(72-73) in \cite{TorresDolan2022} in the circular case (where $\dot{\phi} = \Omega \dot{t}$). Next we expand this component in a power series of $z=\cos\theta$ Giving:
@@ -266,13 +266,14 @@ Which agrees with Eq.~(72-73) in \cite{TorresDolan2022} in the circular case (wh
 \end{equation}
 where:
 \begin{align}
-   \nonumber {}_0\mathcal{F}_r^{lmn} &= \sum\limits_{lj} \Bigg\{\frac{\sqrt{2} (\dot{t} - a \dot{\phi})}{r^2} \Re{\left(\mathcal{C}^\mathcal{L}_{lmnjk}g_{+1} + \frac{i a \mathcal{C}_{+1}^{ljk} \mathcal{D} P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}} \\&+ \frac{\dot{\phi} (a^2 + r^2) + a \dot{t}}{\sqrt{2}\Delta r} \Im{\left(\mathcal{C}_{-1}^{ljk}P_{-1}^{lmn}\alpha_{-1}^{lmn} - \mathcal{C}_{+1}^{ljk} P_{+1}^{lmn} \alpha_{+1}^{lmn}\right)\chi^{lmn}}\Bigg\},\\
-   \nonumber {}_1f_r^{lmn} &= a  \sum\limits_{lj} \Bigg\{\frac{2 \sqrt{2} (\dot{t} - a \dot{\phi})}{r^3} \Im{\left(\mathcal{C^L}_{lmnjk} g_{+1} - \frac{ai\mathcal{C}_{+1}^{ljk}\mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}}\\
-   \nonumber&- \frac{\sqrt{2} (\dot{t}-a\dot{\phi})}{r^3} \Im{\left(\frac{\mathcal{C^L}_{lmnjk}\mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}\right) \chi^{lmn}} \\ &+ \frac{\dot{\phi} (a^2 +r^2) + a \dot{t}}{\sqrt{2} \Delta r^2} \Re{\left(C_{+1}^{lmn} P_{+1}^{lmn} \alpha_{+1}^{lmn} - C_{-1}^{lmn} P_{-1}^{lmn} \alpha_{-1}^{lmn}\right)\chi^{lmn}}\Bigg\},\\
-   \nonumber {}_2f_r^{lmn} &= a^2 \sum\limits_{lj}\Bigg \{ \frac{a \dot{t} + \dot{\phi} (a^2 + r^2)}{\sqrt{2} r^3 \Delta} \Im{\left(C_{+1}^{lmn} P_{+1}^{lmn} \alpha_{+1}^{lmn} - C_{-1}^{lmn} P_{-1}^{lmn} \alpha_{-1}^{lmn}\right)\chi^{lmn}}\\ 
-   \nonumber &+ \frac{2 \sqrt{2} (\dot{t} -a \dot{\phi})}{r^2} \Re{\left(\frac{\mathcal{C^L}_{lmnjk} \mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}} - \frac{3 \sqrt{2} (\dot{t} -a \dot{\phi})}{r^4} \Re{\left(\mathcal{C^L}_{lmnjk} g_{+1} + \frac{i a C_{+1}^{ljk}P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}} \Bigg\}\\
-   &+ a \sum\limits_{lj} \frac{\sqrt{2} \dot{\phi}}{r^2} \Re{\left(\mathcal{C^L}_{lmnjk} g_{+1} + \frac{i a C_{+1}^{ljk}P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}}.
+   \nonumber {}_0\mathcal{F}_r^{lmn} &= \sum\limits_{lj} \Bigg\{\frac{\sqrt{2} (\dot{t} - a \dot{\phi})}{r^2} \Re{\left(\mathcal{C}^\mathcal{L}_{lmnjk}g_{+1} - \frac{i a \mathcal{C}_{+1}^{ljk} \mathcal{D} P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}} \\&- \frac{\dot{\phi} (a^2 + r^2) - a \dot{t}}{\sqrt{2}\Delta r} \Im{\left(\mathcal{C}_{-1}^{ljk}P_{-1}^{lmn}- \mathcal{C}_{+1}^{ljk} P_{+1}^{lmn} \right)\chi^{lmn}}\Bigg\},\\
+   \nonumber {}_1f_r^{lmn} &= a  \sum\limits_{lj} \Bigg\{-\frac{2 \sqrt{2} (\dot{t} - a \dot{\phi})}{r^3} \Im{\left(\mathcal{C^L}_{lmnjk} g_{+1} - \frac{ai\mathcal{C}_{+1}^{ljk}\mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}}\\
+   \nonumber&+ \frac{\sqrt{2} (\dot{t}-a\dot{\phi})}{r^2} \Im{\left(\frac{\mathcal{C^L}_{lmnjk}\mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}\right) \chi^{lmn}} \\ &+ \frac{\dot{\phi} (a^2 +r^2) - a \dot{t}}{\sqrt{2} \Delta r^2} \Re{\left(C_{+1}^{lmn} P_{+1}^{lmn}  - C_{-1}^{lmn} P_{-1}^{lmn} \right)\chi^{lmn}}\Bigg\},\\
+   \nonumber {}_2f_r^{lmn} &= a^2 \sum\limits_{lj}\Bigg \{ \frac{\dot{\phi} (a^2 + r^2)-a \dot{t}}{\sqrt{2} r^3 \Delta} \Im{\left(C_{-1}^{lmn} P_{-1}^{lmn}  - C_{+1}^{lmn} P_{+1}^{lmn} \right)\chi^{lmn}}\\ 
+   \nonumber &+ \frac{2 \sqrt{2} (\dot{t} -a \dot{\phi})}{r^3} \Re{\left(\frac{\mathcal{C^L}_{lmnjk} \mathcal{D}P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}} - \frac{3 \sqrt{2} (\dot{t} -a \dot{\phi})}{r^4} \Re{\left(\mathcal{C^L}_{lmnjk} g_{+1} - \frac{i a C_{+1}^{ljk}P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}} \Bigg\}\\
+   &+ a \sum\limits_{lj} \frac{\sqrt{2} \dot{\phi}}{r^2} \Re{\left(\mathcal{C^L}_{lmnjk} g_{+1} - \frac{i a C_{+1}^{ljk}P_{-1}^{lmn}}{\mathcal{B}}\right)\chi^{lmn}}.
 \end{align}
+
 \newpage
 \appendix
 
@@ -301,7 +302,7 @@ We multiply both sides of eq.~\eqref{eqn:projectionOntoSphericalBasis} by $\bra{
 \subsection{Projecting Spin-$s$ spheroidal harmonics onto spin-0 spherical harmonics}
 The set of spin-0 spherical harmonics also independently make a basis for functions in the space of angular functions. The easiest way to project this is using the following:
 \begin{equation}
-    \sin^{|s|}(\theta) \ket{s l m} = \sum\limits_{j=l-1}^{l+1} \mathfrak{s}^s_{lj} \ket{0 l m}
+    \sin^{|s|}(\theta) \ket{s l m} = \sum\limits_{j=l-1}^{l+1} \mathfrak{s}^su_{lj} \ket{0 l m}
 \end{equation}
 where $\mathfrak{s}^s_{ll'}$ are spin-mixing coefficients defined by:
 \begin{equation}
