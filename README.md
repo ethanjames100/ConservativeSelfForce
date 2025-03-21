@@ -17,4 +17,7 @@ This project aims to calculate the Conservative Electromagnetic Self-force for e
 - **testingEthanCodeInSCaseAgainstTheo.nb**: code that tests my code agains theo's.
 - **EccentricOrbitRegularisation.nb**: Investagiative calculations
 - **testingCL**: Testing the calculation of the CL function.
-- **TeukR.m**: Code used to calculate teukolsky point particle mode functions in TPPM folder.
+- **CalculatePointParticleModes.m**: Calculates Point particle modes (meant for HPC use)
+
+## TPPM files
+The files referanced in some of these notebooks contain computed Teukolsky point particle mode objects (i.e. the output of TeukolskyPointParticleMode[s,l,m,n,0,orbit]). These files are available on request but as they are too large for github.
