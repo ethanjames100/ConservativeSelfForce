@@ -14,8 +14,8 @@ ParallelNeeds["KerrGeodesics`"]
 (*Configurable*)
 prec = 40;
 a= 0;
-p=10;
-e=0.1;
+p=20;
+e=0;
 LMAX=20;
 NMAX=10;
 dir = "/users/smp22ejg/conservativeSelfForce/TRadial/";
@@ -29,12 +29,10 @@ x = 1;
 rmin = p/(1+e+0.1);
 rmax = p/(1-e-0.1);
 
-\[CapitalOmega] =KerrGeoFrequencies[a,p,e,x];
-\[Omega][m_,n_]:=m \[CapitalOmega][[3]] + n \[CapitalOmega][[1]];
 
 data = Table[ParallelTable[Module[{R},
 	(*Calculate Teukolsky Mode*)
-	R = TeukolskyRadial[s,l,m,aa, \[Omega][m,n],Method->{"NumericalIntegration","Domain"-> {"In"->{rmin,rmax}, "Up"->{rmin,rmax}}}];
+	R = TeukolskyRadial[s,l,m,aa, \[Omega][m,n]];
 	Print[ToString[{s,l,l,m,n}]<>" Completed"];
 	(*compress and save to table*)
 	Compress[R]
