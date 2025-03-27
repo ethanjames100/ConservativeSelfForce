@@ -1,23 +1,26 @@
 (* ::Package:: *)
 
-LaunchKernels[64];
+mypath="/users/smp22ejg/bhptk/"
+myfiles={mypath<>"Teukolsky",mypath<>"KerrGeodesics",mypath<>"GeneralRelativityTensors", mypath<>"SpinWeightedSpheroidalHarmonics"}
+Print["Launched"];
+ParallelEvaluate[PacletDirectoryLoad[myfiles]]
+PacletDirectoryLoad[myfiles]
 <<Teukolsky`
 <<KerrGeodesics`
 ParallelNeeds["Teukolsky`"]
 ParallelNeeds["KerrGeodesics`"]
 
+Print[Information[PacletObject["Teukolsky"]]]
+
+Package
 (*Configurable*)
 prec = 40;
 a= 0;
-p=10;
+p=20;
 e=0.1;
-ra = 4;
-rb = 100;
-dr = 1;
-region = "\[ScriptCapitalH]";
 LMAX=30;
 NMAX=30;
-dir = "";
+dir = "/users/smp22ejg/conservativeSelfForce/TPPM/";
 
 (*Set Precisions*)
 aa = SetPrecision[a,prec];
@@ -29,17 +32,12 @@ x = 1;
 orbit = KerrGeoOrbit[aa, pp, ee, x];
 
 (*Calculate table of interpolation strings*)
-data = ParallelTable[Module[{mode, rs, interp},
+data = Table[ParallelTable[Module[{mode, rs, interp},
 	(*Calculate Teukolsky Mode*)
 	mode = TeukolskyPointParticleMode[s,l,m,n,0,orbit];
-	(*calculate table of values through specified domain*)
-	rs = Table[{r,mode["ExtendedHomogeneous"->region][r]},{r,ra,rb,dr}];
-	(*interpolate rvalues*)
-	interp = Interpolation[rs];
-	Print[ToString[{s,l,m,n}]<>" Completed"];
-	(*compress and save to table*)
-	Compress[interp]
-],{s,{-1,1}}, {l,1,LMAX}, {m,-l,l},{n,-NMAX, NMAX} ];
+	Print[{s,l,m,n}];
+	Compress[mode]
+], {l,1,LMAX}, {m,-l,l},{n,-NMAX,NMAX}],{s,{-1,1}} ];
 
 dataString = Compress[data];
-Export[dir<>"TPPMStringTable..a"<>ToString[a]<>"..p"<>ToString[p]<>"..e"<>ToString[e]<>"..ra"<>ToString[ra]<>"..rb"<>ToString[rb]<>"..region"<>region<>"..LMAX"<>ToString[LMAX]<>"..NMAX"<>ToString[NMAX]<>".dat",dataString]
+Export[dir<>"TPPMStringTable..a"<>ToString[a]<>"..p"<>ToString[p]<>"..e"<>ToString[e]<>"..LMAX"<>ToString[LMAX]<>"..NMAX"<>ToString[NMAX]<>".dat",dataString]
